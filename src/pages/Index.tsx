@@ -138,11 +138,13 @@ const Index = () => {
       <ContentSection
         id="shop"
         number="05"
-        title="延續幸福的質地。"
+        title="優質選物"
         subtitle="Shop"
         layoutVariant="overlay"
         description={
           <>
+            延續幸福的質地。
+            <br /><br />
             讓悅納的純淨與心意，
             <br />
             陪你回到日常，好好生活。
