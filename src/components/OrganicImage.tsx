@@ -35,7 +35,7 @@ export const OrganicImage = ({
           style={{ borderRadius: "45% 55% 50% 50% / 50% 55% 45% 50%" }}
         />
       )}
-      
+
       {/* Main image container */}
       <div
         className="overflow-hidden shadow-organic"

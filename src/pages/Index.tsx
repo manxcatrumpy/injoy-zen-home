@@ -24,21 +24,22 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Section 1: About */}
+      {/* Section 1: About - Center layout with image in middle */}
       <ContentSection
         id="about"
         number="01"
         title="關於悅納"
         subtitle="about"
+        layoutVariant="center"
         description={
           <>
-            <p>
-              悅納，把生活過成喜歡的樣子。
-            </p>
-            <p>
-              這裡，提供身體需要的自在、如家一樣的溫馨心意，
-              時間煮出的湯品。
-            </p>
+            悅納，把生活過成喜歡的樣子
+            <br /><br />
+            選擇，提供身體需要的
+            <br />
+            自在，如家一樣的溫馨
+            <br />
+            心意，時間熬出的清甜
           </>
         }
         imageElement={
@@ -51,21 +52,20 @@ const Index = () => {
         }
       />
 
-      {/* Section 2: Dining */}
+      {/* Section 2: Dining - Image on right, text on left */}
       <ContentSection
         id="dining"
         number="02"
         title="餐飲體驗"
-        subtitle="dining"
+        subtitle="Dining"
+        layoutVariant="image-right"
         description={
           <>
-            <p>
-              感恩大自然帶給我們的美好！
-            </p>
-            <p>
-              我們珍惜每一份食材，用心料理，讓每一口都能嚐到
-              來自土地的真實滋味。
-            </p>
+            感恩大自然帶給我們的美好！
+            <br />
+            每一口，都是與土地的對話，
+            <br />
+            純粹、天然，回歸本真。
           </>
         }
         imageElement={
@@ -76,23 +76,24 @@ const Index = () => {
             className="w-full max-w-sm mx-auto aspect-square"
           />
         }
-        reverse
       />
 
-      {/* Section 3: Space */}
+      {/* Section 3: Space - Wide image on left, text on right */}
       <ContentSection
         id="space"
         number="03"
         title="人文空間"
-        subtitle="space"
+        subtitle="Space"
+        layoutVariant="image-left-wide"
         description={
           <>
-            <p>
-              不論獨處或相聚，在如家的溫暖裡，
-            </p>
-            <p>
-              陪你享健康、有愛的有生命的生活。
-            </p>
+            不論獨處或相聚，
+            <br />
+            在如家的溫暖裡，
+            <br />
+            陪你實踐健康、有愛的
+            <br />
+            有生命的生命。
           </>
         }
         imageElement={
@@ -105,20 +106,22 @@ const Index = () => {
         }
       />
 
-      {/* Section 4: Life */}
+      {/* Section 4: Life - Image on right, text on left */}
       <ContentSection
         id="life"
         number="04"
         title="生活美學"
-        subtitle="life"
+        subtitle="Life"
+        layoutVariant="image-right"
         description={
           <>
-            <p>
-              每一次相聚，都是生活美好的提案。
-            </p>
-            <p>
-              在這裡，我們交換智慧，共育生命的律動。
-            </p>
+            每一次相聚，
+            <br />
+            都是生活美好的提案。
+            <br /><br />
+            在這裡，我們交換智慧，
+            <br />
+            共寫生命的律動。
           </>
         }
         imageElement={
@@ -129,23 +132,20 @@ const Index = () => {
             className="w-full max-w-sm mx-auto aspect-square"
           />
         }
-        reverse
       />
 
-      {/* Section 5: Shop */}
+      {/* Section 5: Shop - Overlay layout with text beside image */}
       <ContentSection
         id="shop"
         number="05"
-        title="優質選物"
-        subtitle="shop"
+        title="延續幸福的質地。"
+        subtitle="Shop"
+        layoutVariant="overlay"
         description={
           <>
-            <p>
-              延續幸福的質地。
-            </p>
-            <p>
-              讓悅納的純淨與心意，陪你回到日常，好好生活。
-            </p>
+            讓悅納的純淨與心意，
+            <br />
+            陪你回到日常，好好生活。
           </>
         }
         imageElement={
@@ -153,7 +153,7 @@ const Index = () => {
             src={gatheringFriends}
             alt="朋友們的歡樂聚會"
             variant="arch"
-            className="w-full max-w-sm mx-auto aspect-[3/4]"
+            className="w-full h-full"
           />
         }
       />
