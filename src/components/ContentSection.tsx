@@ -28,33 +28,26 @@ export const ContentSection = ({
       <section id={id} className="py-24 md:py-32 overflow-hidden relative">
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
-            {/* Left: Section Label (desktop only) */}
-            <div className="order-2 md:order-1 text-right self-end md:mb-16 md:mr-[-40px] z-20 relative hidden md:block">
-              <div className="flex items-center justify-end gap-3">
-                <div className="text-right">
-                  <span className="block text-xs font-sans tracking-[0.2em] text-muted-foreground uppercase">
-                    {number} {subtitle}
-                  </span>
-                  <span className="block text-xl font-bold text-foreground tracking-widest mt-1">
-                    {title}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Center: Image */}
-            <div className="order-1 md:order-2 relative flex-shrink-0">
+            {/* Left: Image */}
+            <div className="order-1 md:order-1 relative flex-shrink-0">
               {imageElement}
             </div>
 
             {/* Right: Description */}
-            <div className="order-3 md:order-3 w-full md:w-auto md:max-w-sm text-left self-center md:pl-8">
+            <div className="order-2 md:order-2 w-full md:w-auto md:max-w-sm text-left self-center md:pl-8">
               {/* Mobile header */}
               <div className="md:hidden mb-6 border-b border-border pb-2">
                 <span className="text-xs font-sans tracking-[0.2em] text-muted-foreground uppercase">
                   {number} {subtitle}
                 </span>
                 <h3 className="text-xl font-bold text-foreground mt-1">{title}</h3>
+              </div>
+              {/* Desktop header - above description */}
+              <div className="hidden md:block pb-4 mb-6">
+                <h3 className="text-xs font-sans tracking-[0.2em] uppercase text-muted-foreground">
+                  {number} {subtitle}
+                </h3>
+                <h2 className="text-2xl font-bold text-foreground mt-1">{title}</h2>
               </div>
               <div className="text-base leading-loose text-foreground/80 mb-8 font-light tracking-wide">
                 {description}
