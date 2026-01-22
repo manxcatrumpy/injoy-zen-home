@@ -84,10 +84,9 @@ export const ContentSection = ({
               </div>
               <a
                 href={`#${id}`}
-                className="inline-flex items-center text-primary font-bold tracking-widest hover:underline decoration-1 underline-offset-4 group transition-all flex-row-reverse text-xs uppercase"
+                className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-xs hover:text-primary transition-colors uppercase group font-light"
               >
-                <span className="rotate-180 mr-1 group-hover:-translate-x-1 transition-transform">›</span>
-                more
+                more <span className="text-lg ml-2 group-hover:-translate-x-1 transition-transform">&lt;</span>
               </a>
             </div>
 
@@ -133,9 +132,9 @@ export const ContentSection = ({
               </div>
               <a
                 href={`#${id}`}
-                className="inline-flex items-center text-primary font-bold tracking-widest hover:underline decoration-1 underline-offset-4 group transition-all text-xs uppercase"
+                className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-xs hover:text-primary transition-colors uppercase group font-light"
               >
-                more <span className="ml-1 group-hover:translate-x-1 transition-transform">›</span>
+                more <span className="text-lg ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
               </a>
             </div>
           </div>
@@ -205,9 +204,9 @@ export const ContentSection = ({
               </div>
               <a
                 href={`#${id}`}
-                className="inline-flex items-center text-primary font-bold tracking-widest hover:underline decoration-1 underline-offset-4 group transition-all text-xs uppercase"
+                className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-xs hover:text-primary transition-colors uppercase group font-light"
               >
-                more <span className="ml-1 group-hover:translate-x-1 transition-transform">›</span>
+                more <span className="text-lg ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
               </a>
             </div>
           </div>
