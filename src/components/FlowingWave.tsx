@@ -1,12 +1,13 @@
 export const FlowingWave = () => {
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {/* Main flowing wave */}
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 content-visibility-auto">
+      {/* Main flowing wave - GPU accelerated */}
       <svg
-        className="absolute w-full h-full animate-flow"
+        className="absolute w-full h-full animate-flow will-change-transform"
         viewBox="0 0 1440 2800"
         fill="none"
         preserveAspectRatio="xMidYMid slice"
+        style={{ transform: 'translateZ(0)' }}
       >
         <path
           d="M-100 200 Q 200 100, 400 300 T 700 250 T 1000 400 T 1300 350 T 1600 500 
