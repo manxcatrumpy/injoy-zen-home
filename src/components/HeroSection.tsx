@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import heroCafe from "@/assets/hero-cafe.jpg";
+import heroCafe from "@/assets/hero-cafe.png";
 
 export const HeroSection = () => {
   return (

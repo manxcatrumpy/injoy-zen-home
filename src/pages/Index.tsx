@@ -6,11 +6,11 @@ import { OrganicImage } from "@/components/OrganicImage";
 import { Footer } from "@/components/Footer";
 
 // Import images
-import leavesCloseup from "@/assets/leaves-closeup.jpg";
+import leavesCloseup from "@/assets/leaves-closeup.png";
 import tomatoHand from "@/assets/tomato-hand.jpg";
-import restaurantInterior from "@/assets/restaurant-interior.jpg";
+import restaurantInterior from "@/assets/restaurant-interior.png";
 import teaCeremony from "@/assets/tea-ceremony.jpg";
-import gatheringFriends from "@/assets/gathering-friends.jpg";
+import gatheringFriends from "@/assets/gathering-friends.png";
 
 const Index = () => {
   return (
