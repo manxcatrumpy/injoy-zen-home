@@ -142,11 +142,13 @@
     border-radius: var(--elongated);
   }
 
-  /* Glass effect for header */
+  /* Glass effect for header - 優化 GPU 性能 */
   .glass-header {
-    background: hsl(var(--cream) / 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: hsl(var(--cream) / 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    will-change: backdrop-filter;
+    transform: translateZ(0);
   }
 
   /* Flowing wave animation */
@@ -187,6 +189,24 @@
 
   .animate-bounce-gentle {
     animation: bounce-gentle 2s ease-in-out infinite;
+  }
+
+  /* 尊重用戶偏好，減少動畫以提升性能 */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-flow,
+    .animate-float,
+    .animate-bounce-gentle {
+      animation: none;
+    }
+  }
+
+  /* GPU 加速輔助類 */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .content-visibility-auto {
+    content-visibility: auto;
   }
 
   /* Section transitions */
