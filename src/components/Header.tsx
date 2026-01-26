@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const navItems = [
   { label: "關於悅納", href: "#about" },
@@ -41,11 +42,11 @@ export const Header = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-organic transition-transform group-hover:scale-105">
-            <span className="text-primary-foreground font-serif text-sm font-medium">
-              Injoy
-            </span>
-          </div>
+          <img
+            src={logo}
+            alt="悅納"
+            className="h-10 md:h-12 w-auto transition-transform group-hover:scale-105"
+          />
           <span className="font-serif text-xl text-primary font-medium tracking-wide">
             悅納
           </span>
