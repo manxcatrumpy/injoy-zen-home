@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type ShapeVariant = "oval" | "blob" | "blob-2" | "elongated" | "arch" | "overlap";
+type ShapeVariant = "oval" | "blob" | "blob-2" | "elongated" | "arch" | "overlap" | "capsule-left" | "corner-round";
 
 interface OrganicImageProps {
   src: string;
@@ -35,6 +35,14 @@ const shapeConfig: Record<ShapeVariant, { borderRadius: string; aspectRatio: str
   overlap: {
     borderRadius: "50% 50% 55% 45% / 55% 50% 50% 45%",
     aspectRatio: "1/1",
+  },
+  "capsule-left": {
+    borderRadius: "55% 45% 50% 50% / 70% 70% 40% 40%", // 鵝卵石形，左圓右收
+    aspectRatio: "3/2", // 橫式橢圓
+  },
+  "corner-round": {
+    borderRadius: "5% 5% 5% 50% / 5% 5% 5% 50%", // 左下圓弧，其他直角
+    aspectRatio: "1/1", // 正方形
   },
 };
 

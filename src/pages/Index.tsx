@@ -100,7 +100,7 @@ const Index = () => {
           <OrganicImage
             src={restaurantInterior}
             alt="溫馨的用餐空間"
-            variant="elongated"
+            variant="capsule-left"
             className="w-full max-w-xl mx-auto"
           />
         }
@@ -155,7 +155,7 @@ const Index = () => {
             src={gatheringFriends}
             alt="朋友們的歡樂聚會"
             variant="arch"
-            className="w-full h-full"
+            className="w-full max-w-md mx-auto"
           />
         }
       />
