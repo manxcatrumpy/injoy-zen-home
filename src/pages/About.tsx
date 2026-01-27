@@ -85,7 +85,7 @@ const About = () => {
       {/* Section 2: 事 (Space) - Text on left with character behind, image on right */}
       <section id="space" className="py-24 md:py-32 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 relative">
-          <div className="flex flex-col md:flex-row items-center gap-6">
+          <div className="flex flex-col-reverse md:flex-row items-center gap-6">
             {/* Left: Text with Background Character */}
             <div className="w-full md:w-1/2 text-left md:text-right relative z-10">
               {/* Background Character - Behind text on left */}
