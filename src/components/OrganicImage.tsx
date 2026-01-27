@@ -10,13 +10,32 @@ interface OrganicImageProps {
   overlayElement?: ReactNode;
 }
 
-const shapeStyles: Record<ShapeVariant, string> = {
-  oval: "60% 40% 55% 45% / 70% 65% 35% 30%",
-  blob: "55% 45% 60% 40% / 45% 55% 45% 55%",
-  "blob-2": "45% 55% 50% 50% / 55% 45% 55% 45%",
-  elongated: "45% 55% 50% 50% / 25% 25% 75% 75%",
-  arch: "50% 50% 0% 0% / 100% 100% 0% 0%",
-  overlap: "50% 50% 55% 45% / 55% 50% 50% 45%",
+// Shape styles with recommended aspect ratios for consistent appearance
+const shapeConfig: Record<ShapeVariant, { borderRadius: string; aspectRatio: string }> = {
+  oval: {
+    borderRadius: "60% 40% 55% 45% / 70% 65% 35% 30%",
+    aspectRatio: "3/4", // 直式橢圓，適合人像或產品
+  },
+  blob: {
+    borderRadius: "55% 45% 60% 40% / 45% 55% 45% 55%",
+    aspectRatio: "1/1", // 正方形最能展現有機形狀
+  },
+  "blob-2": {
+    borderRadius: "45% 55% 50% 50% / 55% 45% 55% 45%",
+    aspectRatio: "1/1",
+  },
+  elongated: {
+    borderRadius: "45% 55% 50% 50% / 25% 25% 75% 75%",
+    aspectRatio: "2/1", // 橫式拉長，適合風景或空間照
+  },
+  arch: {
+    borderRadius: "50% 50% 0% 0% / 100% 100% 0% 0%",
+    aspectRatio: "4/5", // 拱形門效果
+  },
+  overlap: {
+    borderRadius: "50% 50% 55% 45% / 55% 50% 50% 45%",
+    aspectRatio: "1/1",
+  },
 };
 
 export const OrganicImage = ({
@@ -26,6 +45,8 @@ export const OrganicImage = ({
   className = "",
   overlayElement,
 }: OrganicImageProps) => {
+  const config = shapeConfig[variant];
+
   return (
     <div className={`relative ${className}`}>
       {/* Gold background overlay for "overlap" variant */}
@@ -36,10 +57,13 @@ export const OrganicImage = ({
         />
       )}
 
-      {/* Main image container */}
+      {/* Main image container with fixed aspect ratio */}
       <div
         className="overflow-hidden shadow-organic"
-        style={{ borderRadius: shapeStyles[variant] }}
+        style={{
+          borderRadius: config.borderRadius,
+          aspectRatio: config.aspectRatio,
+        }}
       >
         <img
           src={src}

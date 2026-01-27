@@ -47,7 +47,7 @@ const Index = () => {
             src={leavesCloseup}
             alt="陽光下的綠葉"
             variant="oval"
-            className="w-full max-w-sm mx-auto aspect-[3/4]"
+            className="w-full max-w-sm mx-auto"
           />
         }
       />
@@ -73,7 +73,7 @@ const Index = () => {
             src={tomatoHand}
             alt="手持新鮮番茄"
             variant="blob"
-            className="w-full max-w-sm mx-auto aspect-square"
+            className="w-full max-w-sm mx-auto"
           />
         }
       />
@@ -101,7 +101,7 @@ const Index = () => {
             src={restaurantInterior}
             alt="溫馨的用餐空間"
             variant="elongated"
-            className="w-full max-w-xl mx-auto aspect-[2/1]"
+            className="w-full max-w-xl mx-auto"
           />
         }
       />
@@ -129,7 +129,7 @@ const Index = () => {
             src={teaCeremony}
             alt="茶道儀式"
             variant="overlap"
-            className="w-full max-w-sm mx-auto aspect-square"
+            className="w-full max-w-sm mx-auto"
           />
         }
       />
