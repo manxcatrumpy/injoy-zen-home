@@ -31,6 +31,7 @@ const Index = () => {
         title="關於悅納"
         subtitle="about"
         layoutVariant="center"
+        moreLink="/about"
         description={
           <>
             悅納，把生活過成喜歡的樣子
