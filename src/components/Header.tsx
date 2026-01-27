@@ -1,13 +1,14 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "關於悅納", href: "#about" },
-  { label: "餐飲體驗", href: "#dining" },
-  { label: "人文空間", href: "#space" },
-  { label: "生活美學", href: "#life" },
-  { label: "優質選物", href: "#shop" },
-  { label: "交通資訊", href: "#location" },
+  { label: "關於悅納", href: "/about", isRoute: true },
+  { label: "餐飲體驗", href: "#dining", isRoute: false },
+  { label: "人文空間", href: "#space", isRoute: false },
+  { label: "生活美學", href: "#life", isRoute: false },
+  { label: "優質選物", href: "#shop", isRoute: false },
+  { label: "交通資訊", href: "#location", isRoute: false },
 ];
 
 export const Header = () => {
@@ -40,7 +41,7 @@ export const Header = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
+        <Link to="/" className="flex items-center gap-3 group">
           <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-organic transition-transform group-hover:scale-105">
             <span className="text-primary-foreground font-serif text-sm font-medium">
               Injoy
@@ -49,19 +50,29 @@ export const Header = () => {
           <span className="font-serif text-xl text-primary font-medium tracking-wide">
             悅納
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-foreground/80 hover:text-primary font-sans text-sm tracking-wide transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.isRoute ? (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="text-foreground/80 hover:text-primary font-sans text-sm tracking-wide transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-foreground/80 hover:text-primary font-sans text-sm tracking-wide transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full"
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -81,16 +92,27 @@ export const Header = () => {
         }`}
       >
         <nav className="container mx-auto px-6 py-4 flex flex-col gap-4">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-foreground/80 hover:text-primary font-sans text-base py-2 transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.isRoute ? (
+              <Link
+                key={item.href}
+                to={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-foreground/80 hover:text-primary font-sans text-base py-2 transition-colors"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-foreground/80 hover:text-primary font-sans text-base py-2 transition-colors"
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </nav>
       </div>
     </header>
