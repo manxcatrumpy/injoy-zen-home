@@ -1,4 +1,5 @@
-import { MapPin, Phone, ExternalLink } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
+import signboard from "@/assets/signboard.png";
 
 export const Footer = () => {
   return (
@@ -22,29 +23,29 @@ export const Footer = () => {
             </p>
           </div>
 
-          <a
-            href="https://maps.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary font-sans text-sm mt-6 hover:gap-3 transition-all"
-          >
-            google map
-            <ExternalLink size={14} />
-          </a>
         </div>
 
-        {/* Hand-drawn Map Illustration Placeholder */}
-        <div className="max-w-lg mx-auto mb-16">
-          <div 
-            className="aspect-[16/9] bg-gold/20 flex items-center justify-center"
-            style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
-          >
-            <div className="text-center text-primary/60 font-sans text-sm">
-              <MapPin size={32} className="mx-auto mb-2 opacity-60" />
-              <p>悅納生活館</p>
-              <p className="text-xs text-muted-foreground mt-1">文聖街131號</p>
-            </div>
-          </div>
+        {/* Google Map Embed */}
+        <div className="max-w-2xl mx-auto mb-12 rounded-lg overflow-hidden shadow-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.5!2d121.47822!3d25.028745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94d17bc0517%3A0x88c1a24b258f67f7!2z5oKF57SN6JSt6aOf55Sf5rS76aSo!5e0!3m2!1szh-TW!2stw!4v1706400000000!5m2!1szh-TW!2stw"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="悅納蔬食生活館地圖"
+          />
+        </div>
+
+        {/* Signboard Photo */}
+        <div className="max-w-2xl mx-auto mb-12">
+          <img
+            src={signboard}
+            alt="悅納招牌"
+            className="w-full h-auto rounded-sm"
+          />
         </div>
 
         {/* Tagline */}
