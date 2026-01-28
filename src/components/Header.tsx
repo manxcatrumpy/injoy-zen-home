@@ -36,7 +36,7 @@ export const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow,padding] duration-300 ${
-        isScrolled ? "glass-header shadow-soft py-3" : "bg-transparent py-5"
+        isScrolled ? "glass-header shadow-soft py-3" : "bg-background/60 backdrop-blur-sm py-5"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
