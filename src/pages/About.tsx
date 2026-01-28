@@ -27,13 +27,6 @@ const About = () => {
         </div>
 
 
-        {/* Reservation Button */}
-        <a
-          href="#reservation"
-          className="absolute top-6 right-6 bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors shadow-organic"
-        >
-          預約
-        </a>
       </section>
 
       {/* Section 1: 人 (People) - Ginkgo leaf image on left, text on right */}
