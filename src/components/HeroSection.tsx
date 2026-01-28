@@ -14,16 +14,6 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/10 to-background/60" />
       </div>
 
-      {/* Decorative Logo Element - Top Right */}
-      <div className="absolute top-24 right-8 lg:right-16 opacity-30">
-        <div className="font-serif text-primary text-6xl lg:text-8xl font-light italic tracking-widest">
-          悅納
-        </div>
-        <div className="font-serif text-primary/60 text-2xl lg:text-3xl italic -mt-2">
-          injoy
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <h1 className="font-serif text-primary text-2xl md:text-3xl lg:text-4xl leading-relaxed max-w-2xl mx-auto">
