@@ -91,12 +91,8 @@ export const ContentSection = ({
               </a>
             </div>
 
-            {/* Right: Image with background number */}
-            <div className="w-full md:w-1/2 flex justify-center md:justify-start relative">
-              {/* Background Number */}
-              <div className="absolute -right-12 top-1/2 -translate-y-1/2 z-10 hidden md:block">
-                <span className="text-8xl font-serif text-muted/50 font-bold">{number}</span>
-              </div>
+            {/* Right: Image */}
+            <div className="w-full md:w-1/2 flex justify-center md:justify-start">
               {imageElement}
             </div>
           </div>
@@ -116,12 +112,8 @@ export const ContentSection = ({
               {imageElement}
             </div>
 
-            {/* Right: Text with background number */}
-            <div className="w-full md:w-2/5 text-left md:pl-10 relative">
-              {/* Background Number */}
-              <div className="absolute right-0 top-0 opacity-10 pointer-events-none hidden lg:block">
-                <span className="text-[8rem] font-bold text-foreground/30 font-serif">{number}</span>
-              </div>
+            {/* Right: Text */}
+            <div className="w-full md:w-2/5 text-left md:pl-10">
               <div className="pb-4 mb-6 inline-block">
                 <h3 className="text-xs font-sans tracking-[0.2em] uppercase text-muted-foreground">
                   {number} {subtitle}
