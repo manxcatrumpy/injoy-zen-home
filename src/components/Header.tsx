@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -11,10 +11,32 @@ const navItems = [
   { label: "交通資訊", href: "#location", isRoute: false },
 ];
 
+// Custom hook for anchor navigation that works across pages
+const useAnchorNavigation = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === "/";
+
+  const handleAnchorClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (!isHomePage) {
+      e.preventDefault();
+      // Navigate to home page with hash
+      navigate("/" + href);
+    }
+    // If on home page, let the default anchor behavior work
+  };
+
+  return { handleAnchorClick, isHomePage };
+};
+
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const ticking = useRef(false);
+  const { handleAnchorClick } = useAnchorNavigation();
 
   const updateScrollState = useCallback(() => {
     setIsScrolled(window.scrollY > 50);
@@ -67,6 +89,7 @@ export const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={(e) => handleAnchorClick(e, item.href)}
                 className="text-foreground/80 hover:text-primary font-sans text-sm tracking-wide transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full"
               >
                 {item.label}
@@ -106,7 +129,10 @@ export const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  handleAnchorClick(e, item.href);
+                  setIsMobileMenuOpen(false);
+                }}
                 className="text-foreground/80 hover:text-primary font-sans text-base py-2 transition-colors"
               >
                 {item.label}
