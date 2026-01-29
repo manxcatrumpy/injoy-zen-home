@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { FlowingWave } from "@/components/FlowingWave";
 import { HeroSection } from "@/components/HeroSection";
@@ -13,6 +15,22 @@ import teaCeremony from "@/assets/tea-ceremony.jpg";
 import gatheringFriends from "@/assets/gathering-friends.png";
 
 const Index = () => {
+  const location = useLocation();
+
+  // Handle hash navigation when coming from other pages
+  useEffect(() => {
+    if (location.hash) {
+      // Small delay to ensure DOM is ready
+      const timer = setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [location.hash]);
+
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden">
       {/* Background flowing wave decoration */}

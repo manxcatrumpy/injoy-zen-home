@@ -65,7 +65,9 @@ export const Footer = () => {
           </p>
           <div className="flex items-center justify-center gap-6">
             <a
-              href="#"
+              href="https://lin.ee/97XgLRz"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="LINE"
             >
@@ -74,7 +76,9 @@ export const Footer = () => {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/p/%E6%82%85%E7%B4%8D%E8%94%AC%E9%A3%9F%E7%94%9F%E6%B4%BB%E9%A4%A8-100093238144393/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="Facebook"
             >
@@ -83,7 +87,9 @@ export const Footer = () => {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/injoysharelife/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="Instagram"
             >
