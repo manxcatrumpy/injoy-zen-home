@@ -58,13 +58,13 @@ const Index = () => {
         <ContentSection
           id="about"
           number="01"
-          title="關於悅納"
+          title="關於悦納"
           subtitle="about"
           layoutVariant="center"
           moreLink="/about"
           description={
             <>
-              悅納，把生活過成喜歡的樣子
+              悦納，把生活過成喜歡的樣子
               <br /><br />
               選擇，提供身體需要的
               <br />
@@ -181,7 +181,7 @@ const Index = () => {
             <>
               延續幸福的質地。
               <br /><br />
-              讓悅納的純淨與心意，
+              讓悦納的純淨與心意，
               <br />
               陪你回到日常，好好生活。
             </>
