@@ -35,7 +35,12 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background" />
         </div>
 
-
+        {/* Hero Title */}
+        <div className="absolute bottom-32 left-0 right-0 z-10 text-center">
+          <h1 className="font-serif text-primary text-3xl md:text-4xl lg:text-5xl tracking-widest">
+            關於悦納
+          </h1>
+        </div>
       </section>
 
       {/* Main Content */}
