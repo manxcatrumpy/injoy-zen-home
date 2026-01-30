@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import heroCafe from "@/assets/hero-cafe.png";
+import heroCafeSrcSet from "@/assets/hero-cafe.png?w=800;1600;2400&format=webp&as=srcset";
 
 export const HeroSection = () => {
   return (
@@ -8,6 +9,8 @@ export const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroCafe}
+          srcSet={heroCafeSrcSet}
+          sizes="100vw"
           alt="Injoy 悅納 明亮溫馨的空間"
           className="w-full h-full object-cover"
         />
