@@ -87,7 +87,7 @@ export const ContentSection = ({
                 href={`#${id}`}
                 className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-xs hover:text-primary transition-colors uppercase group font-light"
               >
-                more <span className="text-lg ml-2 group-hover:-translate-x-1 transition-transform">&lt;</span>
+                more <span className="text-lg ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
               </a>
             </div>
 
@@ -155,11 +155,9 @@ export const ContentSection = ({
               </div>
               <a
                 href={`#${id}`}
-                className="inline-flex items-center text-primary font-bold tracking-widest hover:underline decoration-1 underline-offset-4 group transition-all md:flex-row-reverse text-xs uppercase"
+                className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-xs hover:text-primary transition-colors uppercase group font-light"
               >
-                more
-                <span className="ml-1 group-hover:translate-x-1 transition-transform md:hidden">›</span>
-                <span className="mr-1 rotate-180 group-hover:-translate-x-1 transition-transform hidden md:inline">›</span>
+                more <span className="text-lg ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
               </a>
             </div>
 
