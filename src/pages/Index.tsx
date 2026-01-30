@@ -6,6 +6,7 @@ import { FlowingWave } from "@/components/FlowingWave";
 import { HeroSection } from "@/components/HeroSection";
 import { ContentSection } from "@/components/ContentSection";
 import { OrganicImage } from "@/components/OrganicImage";
+import { LocationSection } from "@/components/LocationSection";
 import { Footer } from "@/components/Footer";
 
 // Import images with srcset for responsive loading
@@ -196,6 +197,9 @@ const Index = () => {
             />
           }
         />
+
+        {/* Location Section */}
+        <LocationSection />
       </main>
 
       {/* Footer */}
