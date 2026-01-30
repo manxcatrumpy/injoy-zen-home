@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "關於悅納", href: "/about", isRoute: true },
+  { label: "關於悦納", href: "/about", isRoute: true },
   { label: "餐飲體驗", href: "#dining", isRoute: false },
   { label: "人文空間", href: "#space", isRoute: false },
   { label: "生活美學", href: "#life", isRoute: false },
@@ -70,7 +70,7 @@ export const Header = () => {
             </span>
           </div>
           <span className="font-serif text-xl text-primary font-medium tracking-wide">
-            悅納
+            悦納
           </span>
         </Link>
 

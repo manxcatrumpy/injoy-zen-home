@@ -11,7 +11,7 @@ export const HeroSection = () => {
           src={heroCafe}
           srcSet={heroCafeSrcSet}
           sizes="100vw"
-          alt="Injoy 悅納 明亮溫馨的空間"
+          alt="Injoy 悦納 明亮溫馨的空間"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/10 to-background/60" />
@@ -23,7 +23,7 @@ export const HeroSection = () => {
           <span className="block mb-2">滋養會生活的生命，</span>
           <span className="block mb-2">實踐有生命的生活。</span>
           <span className="block text-lg md:text-xl lg:text-2xl mt-6 font-light">
-            悅納，隨時歡迎你回家。
+            悦納，隨時歡迎你回家。
           </span>
         </h1>
       </div>

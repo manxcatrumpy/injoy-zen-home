@@ -35,7 +35,7 @@ export const Footer = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="悅納蔬食生活館地圖"
+            title="悦納蔬食生活館地圖"
           />
         </div>
 
@@ -43,14 +43,14 @@ export const Footer = () => {
         <div className="max-w-2xl mx-auto mb-12">
           <img
             src={signboard}
-            alt="悅納招牌"
+            alt="悦納招牌"
             className="w-full h-auto rounded-sm"
           />
         </div>
 
         {/* Tagline */}
         <p className="text-center font-serif text-primary text-lg mb-8">
-          悅納，隨時歡迎你回家坐坐。
+          悦納，隨時歡迎你回家坐坐。
         </p>
 
         {/* Arrow */}
@@ -102,7 +102,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <p className="text-center text-muted-foreground font-sans text-xs mt-12">
-          © {new Date().getFullYear()} Injoy 悅納. All rights reserved.
+          © {new Date().getFullYear()} Injoy 悦納. All rights reserved.
         </p>
       </div>
     </footer>

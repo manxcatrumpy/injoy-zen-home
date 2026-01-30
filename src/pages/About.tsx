@@ -72,7 +72,7 @@ const About = () => {
                   </h2>
 
                   <p className="text-foreground/70 mb-6 leading-loose">
-                    來到悅納，你會發現「純淨」其實很簡單，就是讓身體重新深呼吸。
+                    來到悦納，你會發現「純淨」其實很簡單，就是讓身體重新深呼吸。
                   </p>
 
                   <div className="text-foreground/80 leading-loose space-y-2">
@@ -110,7 +110,7 @@ const About = () => {
                   <p className="text-foreground/70 mb-6 leading-loose">
                     我們常說，空間是生活的容器。
                     <br />
-                    悅納想做的，就是個讓你覺得「像家」的地方。
+                    悦納想做的，就是個讓你覺得「像家」的地方。
                   </p>
 
                   <div className="text-foreground/80 leading-loose space-y-2">
