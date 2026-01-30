@@ -3,10 +3,13 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { OrganicImage } from "@/components/OrganicImage";
 
-// Import images - using existing assets where available
+// Import images with srcset for responsive loading
 import leavesCloseup from "@/assets/leaves-closeup.png";
+import leavesCloseupSrcSet from "@/assets/leaves-closeup.png?w=400;800;1200;1600&format=webp&as=srcset";
 import restaurantInterior from "@/assets/restaurant-interior.png";
+import restaurantInteriorSrcSet from "@/assets/restaurant-interior.png?w=400;800;1200&format=webp&as=srcset";
 import gatheringFriends from "@/assets/gathering-friends.png";
+import gatheringFriendsSrcSet from "@/assets/gathering-friends.png?w=400;800;1200&format=webp&as=srcset";
 
 const About = () => {
   return (
@@ -23,6 +26,8 @@ const About = () => {
         <div className="absolute inset-0">
           <img
             src={leavesCloseup}
+            srcSet={leavesCloseupSrcSet}
+            sizes="100vw"
             alt="銀杏葉背景"
             className="w-full h-full object-cover"
           />
@@ -43,6 +48,7 @@ const About = () => {
               <div className="w-full md:w-2/5 flex justify-center relative z-10">
                 <OrganicImage
                   src={leavesCloseup}
+                  srcSet={leavesCloseupSrcSet}
                   alt="銀杏葉"
                   variant="oval"
                   className="w-full max-w-sm mx-auto"
@@ -126,6 +132,7 @@ const About = () => {
               <div className="w-full md:w-1/2 flex justify-center relative z-10">
                 <OrganicImage
                   src={restaurantInterior}
+                  srcSet={restaurantInteriorSrcSet}
                   alt="溫馨的用餐空間"
                   variant="blob"
                   className="w-full max-w-md mx-auto"
@@ -143,6 +150,7 @@ const About = () => {
               <div className="w-full md:w-2/5 flex justify-center relative z-10">
                 <OrganicImage
                   src={gatheringFriends}
+                  srcSet={gatheringFriendsSrcSet}
                   alt="家人朋友聚餐"
                   variant="capsule-left"
                   className="w-full max-w-sm mx-auto"

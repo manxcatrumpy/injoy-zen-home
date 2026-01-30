@@ -4,6 +4,8 @@ type ShapeVariant = "oval" | "blob" | "blob-2" | "elongated" | "arch" | "overlap
 
 interface OrganicImageProps {
   src: string;
+  srcSet?: string;
+  sizes?: string;
   alt: string;
   variant: ShapeVariant;
   className?: string;
@@ -48,6 +50,8 @@ const shapeConfig: Record<ShapeVariant, { borderRadius: string; aspectRatio: str
 
 export const OrganicImage = ({
   src,
+  srcSet,
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px",
   alt,
   variant,
   className = "",
@@ -75,6 +79,8 @@ export const OrganicImage = ({
       >
         <img
           src={src}
+          srcSet={srcSet}
+          sizes={sizes}
           alt={alt}
           loading="lazy"
           decoding="async"

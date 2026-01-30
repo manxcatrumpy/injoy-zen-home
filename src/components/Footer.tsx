@@ -102,7 +102,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <p className="text-center text-muted-foreground font-sans text-xs mt-12">
-          © 2024 Injoy 悅納. All rights reserved.
+          © {new Date().getFullYear()} Injoy 悅納. All rights reserved.
         </p>
       </div>
     </footer>

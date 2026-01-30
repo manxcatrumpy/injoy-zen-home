@@ -8,12 +8,18 @@ import { ContentSection } from "@/components/ContentSection";
 import { OrganicImage } from "@/components/OrganicImage";
 import { Footer } from "@/components/Footer";
 
-// Import images
+// Import images with srcset for responsive loading
+// Format: ?w=sizes&format=webp&as=srcset generates multiple sizes in WebP format
 import leavesCloseup from "@/assets/leaves-closeup.png";
+import leavesCloseupSrcSet from "@/assets/leaves-closeup.png?w=400;800;1200&format=webp&as=srcset";
 import tomatoHand from "@/assets/tomato-hand.jpg";
+import tomatoHandSrcSet from "@/assets/tomato-hand.jpg?w=400;800;1200&format=webp&as=srcset";
 import restaurantInterior from "@/assets/restaurant-interior.png";
+import restaurantInteriorSrcSet from "@/assets/restaurant-interior.png?w=600;1200;1800&format=webp&as=srcset";
 import teaCeremony from "@/assets/tea-ceremony.jpg";
+import teaCeremonySrcSet from "@/assets/tea-ceremony.jpg?w=400;800;1200&format=webp&as=srcset";
 import gatheringFriends from "@/assets/gathering-friends.png";
+import gatheringFriendsSrcSet from "@/assets/gathering-friends.png?w=400;800;1200&format=webp&as=srcset";
 
 const Index = () => {
   const location = useLocation();
@@ -70,6 +76,7 @@ const Index = () => {
           imageElement={
             <OrganicImage
               src={leavesCloseup}
+              srcSet={leavesCloseupSrcSet}
               alt="陽光下的綠葉"
               variant="oval"
               className="w-full max-w-sm mx-auto"
@@ -96,6 +103,7 @@ const Index = () => {
           imageElement={
             <OrganicImage
               src={tomatoHand}
+              srcSet={tomatoHandSrcSet}
               alt="手持新鮮番茄"
               variant="blob"
               className="w-full max-w-sm mx-auto"
@@ -124,6 +132,8 @@ const Index = () => {
           imageElement={
             <OrganicImage
               src={restaurantInterior}
+              srcSet={restaurantInteriorSrcSet}
+              sizes="(max-width: 768px) 100vw, 60vw"
               alt="溫馨的用餐空間"
               variant="capsule-left"
               className="w-full max-w-xl mx-auto"
@@ -152,6 +162,7 @@ const Index = () => {
           imageElement={
             <OrganicImage
               src={teaCeremony}
+              srcSet={teaCeremonySrcSet}
               alt="茶道儀式"
               variant="overlap"
               className="w-full max-w-sm mx-auto"
@@ -178,6 +189,7 @@ const Index = () => {
           imageElement={
             <OrganicImage
               src={gatheringFriends}
+              srcSet={gatheringFriendsSrcSet}
               alt="朋友們的歡樂聚會"
               variant="arch"
               className="w-full max-w-md mx-auto"
