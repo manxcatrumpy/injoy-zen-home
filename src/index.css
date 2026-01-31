@@ -226,12 +226,28 @@
   .font-serif {
     font-family: var(--font-serif);
   }
-  
+
   .font-sans {
     font-family: var(--font-sans);
   }
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Vertical writing mode for traditional Chinese text */
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .writing-vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .writing-vertical-lr {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
   }
 }
