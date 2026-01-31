@@ -7,9 +7,12 @@ import diningHero from "@/assets/dining-hero.jpg";
 import diningHeroSrcSet from "@/assets/dining-hero.jpg?w=600;1200;1800&format=webp&as=srcset";
 import diningPinyue from "@/assets/dining-pinyue.png";
 import diningPinyueSrcSet from "@/assets/dining-pinyue.png?w=600;1200;1800&format=webp&as=srcset";
-// TODO: Replace with actual dining images when available
-import tomatoHand from "@/assets/tomato-hand.jpg";
-import tomatoHandSrcSet from "@/assets/tomato-hand.jpg?w=600;1200;1800&format=webp&as=srcset";
+// 真味・日常 section image
+import diningTruetaste from "@/assets/dining-truetaest.png";
+import diningTruetasteSrcSet from "@/assets/dining-truetaest.png?w=600;1200;1800&format=webp&as=srcset";
+// 蘊火・炊香 section image
+import diningFire from "@/assets/dining-fire.png";
+import diningFireSrcSet from "@/assets/dining-fire.png?w=600;1200;1800&format=webp&as=srcset";
 
 const Dining = () => {
   return (
@@ -20,29 +23,26 @@ const Dining = () => {
       {/* Header */}
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative w-full">
-        {/* Background Image Container */}
-        <div className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden">
+      {/* Hero Section - Consistent with About page design */}
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
           <img
             src={diningHero}
             srcSet={diningHeroSrcSet}
             sizes="100vw"
             alt="精緻餐點擺盤"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
           />
-          {/* Overlay for better text visibility if needed, though design looks clean */}
-          {/* <div className="absolute inset-0 bg-black/10" /> */}
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background" />
+        </div>
 
-          {/* Hero Title - Overlaid on image, bottom center/right as per mockup */}
-          <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[45%] text-center z-10 pointer-events-none">
-            <h1
-              className="font-serif text-[#1e5c36] text-5xl md:text-7xl lg:text-8xl tracking-widest drop-shadow-sm opacity-90 transform -rotate-6"
-              style={{ fontFamily: '"Noto Serif TC", serif', fontWeight: 600 }}
-            >
-              餐飲體驗
-            </h1>
-          </div>
+        {/* Hero Title */}
+        <div className="absolute bottom-32 left-0 right-0 z-10 text-center">
+          <h1 className="font-serif text-primary text-3xl md:text-4xl lg:text-5xl tracking-widest">
+            餐飲體驗
+          </h1>
         </div>
       </section>
 
@@ -143,9 +143,9 @@ const Dining = () => {
             {/* Right Image Panel */}
             <div className="w-full md:w-[65%] h-[400px] md:h-auto relative">
               <img
-                src={tomatoHand}
-                srcSet={tomatoHandSrcSet}
-                alt="日常套餐"
+                src={diningTruetaste}
+                srcSet={diningTruetasteSrcSet}
+                alt="真味日常火鍋套餐"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -190,9 +190,9 @@ const Dining = () => {
             {/* Right Image Panel */}
             <div className="w-full md:w-[65%] h-[400px] md:h-auto relative">
               <img
-                src={tomatoHand} // Reusing image as placeholder
-                srcSet={tomatoHandSrcSet}
-                alt="砂鍋飯"
+                src={diningFire}
+                srcSet={diningFireSrcSet}
+                alt="蘊火炊香砂鍋飯"
                 className="w-full h-full object-cover"
               />
             </div>
