@@ -92,6 +92,7 @@ const Index = () => {
           title="餐飲體驗"
           subtitle="Dining"
           layoutVariant="image-right"
+          moreLink="/dining"
           description={
             <>
               感恩大自然帶給我們的美好！
