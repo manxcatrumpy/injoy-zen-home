@@ -13,17 +13,17 @@ import tomatoHandSrcSet from "@/assets/tomato-hand.jpg?w=600;1200;1800&format=we
 
 const Dining = () => {
   return (
-    <div className="relative min-h-screen bg-background overflow-x-hidden">
+    <div className="relative min-h-screen bg-background overflow-x-hidden font-sans">
       {/* Skip Link for Accessibility */}
       <SkipLink />
 
       {/* Header */}
       <Header />
 
-      {/* Hero Section - Full-width food image with gradient fade to background */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+      {/* Hero Section */}
+      <section className="relative w-full">
+        {/* Background Image Container */}
+        <div className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden">
           <img
             src={diningHero}
             srcSet={diningHeroSrcSet}
@@ -31,203 +31,184 @@ const Dining = () => {
             alt="精緻餐點擺盤"
             className="w-full h-full object-cover object-center"
           />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background" />
-        </div>
+          {/* Overlay for better text visibility if needed, though design looks clean */}
+          {/* <div className="absolute inset-0 bg-black/10" /> */}
 
-        {/* Hero Title - Positioned at bottom center */}
-        <div className="absolute bottom-32 left-0 right-0 z-10 text-center">
-          <h1 className="font-serif text-primary text-3xl md:text-4xl lg:text-5xl tracking-widest">
-            餐飲體驗
-          </h1>
+          {/* Hero Title - Overlaid on image, bottom center/right as per mockup */}
+          <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[45%] text-center z-10 pointer-events-none">
+            <h1
+              className="font-serif text-[#1e5c36] text-5xl md:text-7xl lg:text-8xl tracking-widest drop-shadow-sm opacity-90 transform -rotate-6"
+              style={{ fontFamily: '"Noto Serif TC", serif', fontWeight: 600 }}
+            >
+              餐飲體驗
+            </h1>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
       <main id="main-content">
         {/* Philosophy Introduction Section */}
-        <section className="py-20 md:py-28 bg-background">
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <p className="text-foreground/80 leading-loose text-base md:text-lg mb-8">
-              本店嚴選純植物性及原形食物為出發，
-              <br />
-              堅持純手工制作，回歸天然飲食，
-              <br />
-              為我們的健康增添多一層保障，多一份安心。
-            </p>
-            <p className="text-foreground/70 leading-loose text-base md:text-lg">
-              每日新鮮現煮五行蔬菜湯，在清洗食材浸泡及烹飪料理，
-              <br />
-              都經能量直飲水處理，讓您吃得無負擔、安心有能量！
-            </p>
+        <section className="py-24 bg-white text-center">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="space-y-12">
+              <p className="text-[#5c5c5c] leading-[2.5] text-lg tracking-wide">
+                本店嚴選純植物性及原形食物為出發，<br />
+                堅持純手工制作，回歸天然飲食，<br />
+                為我們的健康增添多一層保障，多一份安心。
+              </p>
+              <p className="text-[#5c5c5c] leading-[2.5] text-lg tracking-wide">
+                每日新鮮現煮五行蔬菜湯，在清洗食材浸泡及烹飪料理，<br />
+                都經能量直飲水處理，讓您吃得無負擔、安心有能量！
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* 品悦・納幅 Section - Fine Dining Zen Style */}
-        <section className="relative overflow-hidden">
-          <div className="flex flex-col md:flex-row">
-            {/* Left: Cream/Beige background with vertical text - 30% */}
-            <div
-              className="w-full md:w-[30%] flex items-end justify-center py-16 md:py-0 px-4 md:px-6 order-2 md:order-1"
-              style={{ backgroundColor: '#F3E9D9' }}
-            >
-              <div className="flex flex-row items-end justify-center gap-4 md:gap-3 pb-10 md:pb-14">
-                {/* Vertical Title - Forest Green, rightmost */}
-                <h2
-                  className="text-2xl md:text-3xl font-serif tracking-[0.3em] writing-vertical-rl"
-                  style={{ color: '#1A4D2E' }}
-                >
-                  品悦・納幅
-                </h2>
+        {/* 品悦・納幅 Section - Beige Background Left, Image Right */}
+        <section className="relative w-full">
+          <div className="flex flex-col md:flex-row h-auto md:min-h-[600px]">
+            {/* Left Content Panel - Beige/Apricot Color */}
+            <div className="w-full md:w-[35%] bg-[#F2E6D8] relative flex flex-col justify-between py-16 px-8 md:px-12">
 
-                {/* Vertical Description Text - Multiple columns, right to left */}
-                <div
-                  className="flex flex-row gap-2 md:gap-1.5 text-xs md:text-sm leading-relaxed"
-                  style={{ color: '#1A4D2E', opacity: 0.7 }}
-                >
-                  <p className="writing-vertical-rl font-serif">嚴選當令珍饈，</p>
-                  <p className="writing-vertical-rl font-serif">以細膩工序演繹四季流轉。</p>
-                  <p className="writing-vertical-rl font-serif">每一口，</p>
-                  <p className="writing-vertical-rl font-serif">都是對天地厚賜的歡喜接納，</p>
-                  <p className="writing-vertical-rl font-serif">為身心注入圓滿的幸福能量。</p>
+              {/* Vertical Text Container */}
+              <div className="flex-grow flex justify-center items-center">
+                <div className="flex flex-col gap-16 py-8 md:py-12">
+                  {/* Title Part - Top */}
+                  <div className="flex justify-center">
+                    <h2 className="writing-vertical-rl text-[#1e5c36] text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
+                      品悦・納幅
+                    </h2>
+                  </div>
+
+                  {/* Description Part - Bottom */}
+                  {/* Stacking paragraphs horizontally (side-by-side) within the bottom block */}
+                  <div className="flex justify-center gap-3 text-[#1e5c36] text-sm md:text-base tracking-widest leading-loose">
+                    <p className="writing-vertical-rl">嚴選當令珍饈，</p>
+                    <p className="writing-vertical-rl">以細膩工序演繹四季流轉。</p>
+                    <p className="writing-vertical-rl">每一口，</p>
+                    <p className="writing-vertical-rl">都是對天地厚賜的歡喜接納，</p>
+                    <p className="writing-vertical-rl">為身心注入圓滿的幸福能量。</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Right: Food image - 70% width, white/clean background feel */}
-            <div className="w-full md:w-[70%] order-1 md:order-2 overflow-hidden bg-white">
+            {/* Right Image Panel */}
+            <div className="w-full md:w-[65%] h-[400px] md:h-auto relative">
               <img
                 src={diningPinyue}
                 srcSet={diningPinyueSrcSet}
-                sizes="(max-width: 768px) 100vw, 70vw"
                 alt="品悦納幅精緻套餐"
-                className="w-full h-auto object-cover object-center"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
-
-          {/* More Button - Centered below */}
-          <div className="text-center py-12 bg-background">
-            <a
-              href="#dining-menu"
-              className="inline-flex items-center justify-center px-8 py-3 border-2 text-sm tracking-widest hover:text-white transition-colors cursor-pointer font-sans"
-              style={{
-                borderColor: '#1A4D2E',
-                color: '#1A4D2E',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#1A4D2E';
-                e.currentTarget.style.color = '#fff';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = '#1A4D2E';
-              }}
-            >
-              查看更多
-            </a>
-          </div>
         </section>
 
-        {/* 真味・日常 Section - Warm background */}
-        <section className="py-20 md:py-28 relative overflow-hidden" style={{ backgroundColor: '#f5ecd9' }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-col-reverse md:flex-row items-stretch gap-8 md:gap-0">
-              {/* Left: Vertical Text */}
-              <div className="w-full md:w-2/5 flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-6">
-                {/* Vertical Title */}
-                <div className="flex flex-row md:flex-col items-center gap-2">
-                  <h2 className="text-primary text-2xl md:text-3xl font-serif tracking-widest writing-vertical md:writing-vertical-rl">
-                    真味・日常
-                  </h2>
-                </div>
+        {/* View More Button Section - Centered */}
+        <section className="py-20 bg-white flex justify-center">
+          <a
+            href="#dining-menu"
+            className="px-12 py-3 bg-[#427A5B] text-white text-lg tracking-[0.2em] hover:bg-[#336046] transition-colors duration-300 rounded-sm shadow-md"
+          >
+            查看更多
+          </a>
+        </section>
 
-                {/* Vertical Description Text */}
-                <div className="flex flex-row md:flex-col gap-4 md:gap-2 text-foreground/70 text-sm leading-relaxed">
-                  <p className="writing-vertical md:writing-vertical-rl">以慢火熬煮的濃郁與歲月醃漬的甘醇，</p>
-                  <p className="writing-vertical md:writing-vertical-rl">重現記憶中的溫暖滋味。</p>
-                  <p className="writing-vertical md:writing-vertical-rl">這是一份撫慰身心的紮實陪伴，</p>
-                  <p className="writing-vertical md:writing-vertical-rl">讓每一餐，</p>
-                  <p className="writing-vertical md:writing-vertical-rl">都成為安心的歸屬。</p>
-                </div>
-              </div>
-
-              {/* Right: Food Image */}
-              <div className="w-full md:w-3/5">
-                <div className="relative">
-                  <img
-                    src={tomatoHand}
-                    srcSet={tomatoHandSrcSet}
-                    sizes="(max-width: 768px) 100vw, 60vw"
-                    alt="日常套餐"
-                    className="w-full h-auto object-cover rounded-lg shadow-organic"
-                  />
+        {/* 真味・日常 Section - True Taste */}
+        <section className="relative w-full">
+          <div className="flex flex-col md:flex-row h-auto md:min-h-[600px]">
+            {/* Left Content Panel - Beige */}
+            <div className="w-full md:w-[35%] bg-[#F2E6D8] relative flex flex-col justify-between py-16 px-8 md:px-12">
+              <div className="flex-grow flex justify-center items-center">
+                <div className="flex flex-col gap-16 py-8 md:py-12">
+                  {/* Title */}
+                  <div className="flex justify-center">
+                    <h2 className="writing-vertical-rl text-[#1e5c36] text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
+                      真味・日常
+                    </h2>
+                  </div>
+                  {/* Description */}
+                  <div className="flex justify-center gap-3 text-[#5c5c5c] text-sm md:text-base tracking-widest leading-loose">
+                    <p className="writing-vertical-rl">以慢火熬煮的濃郁與歲月醃漬的甘醇，</p>
+                    <p className="writing-vertical-rl">重現記憶中的溫暖滋味。</p>
+                    <p className="writing-vertical-rl">這是一份撫慰身心的紮實陪伴，</p>
+                    <p className="writing-vertical-rl">讓每一餐，</p>
+                    <p className="writing-vertical-rl">都成為安心的歸屬。</p>
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* More Button */}
-            <div className="text-center mt-12">
-              <a
-                href="#daily-menu"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-sans text-sm tracking-widest hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                查看更多
-              </a>
+            {/* Right Image Panel */}
+            <div className="w-full md:w-[65%] h-[400px] md:h-auto relative">
+              <img
+                src={tomatoHand}
+                srcSet={tomatoHandSrcSet}
+                alt="日常套餐"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </section>
 
-        {/* 蘊火・炊香 Section - Green background */}
-        <section className="py-20 md:py-28 relative overflow-hidden" style={{ backgroundColor: '#3d5a4c' }}>
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-col-reverse md:flex-row items-stretch gap-8 md:gap-0">
-              {/* Left: Vertical Text */}
-              <div className="w-full md:w-2/5 flex flex-col md:flex-row items-center md:items-start justify-center gap-8 md:gap-6">
-                {/* Vertical Title */}
-                <div className="flex flex-row md:flex-col items-center gap-2">
-                  <h2 className="text-[#f5ecd9] text-2xl md:text-3xl font-serif tracking-widest writing-vertical md:writing-vertical-rl">
-                    蘊火・炊香
-                  </h2>
-                </div>
+        {/* View More Button Section - Daily */}
+        <section className="py-20 bg-white flex justify-center">
+          <a
+            href="#daily-menu"
+            className="px-12 py-3 bg-[#427A5B] text-white text-lg tracking-[0.2em] hover:bg-[#336046] transition-colors duration-300 rounded-sm shadow-md"
+          >
+            查看更多
+          </a>
+        </section>
 
-                {/* Vertical Description Text */}
-                <div className="flex flex-row md:flex-col gap-4 md:gap-2 text-[#f5ecd9]/80 text-sm leading-relaxed">
-                  <p className="writing-vertical md:writing-vertical-rl">仿效古法土鍋炊飯，</p>
-                  <p className="writing-vertical md:writing-vertical-rl">利用陶鍋燒製過程中產生的氣孔</p>
-                  <p className="writing-vertical md:writing-vertical-rl">以及砂土的遠紅外線效果，</p>
-                  <p className="writing-vertical md:writing-vertical-rl">可以使米飯在烹煮過程中溫度穩定、</p>
-                  <p className="writing-vertical md:writing-vertical-rl">勻速的上升並達到良好的導熱，</p>
-                  <p className="writing-vertical md:writing-vertical-rl">讓食材從裡到外徹底加熱。</p>
-                </div>
-              </div>
-
-              {/* Right: Food Image */}
-              <div className="w-full md:w-3/5">
-                <div className="relative">
-                  <img
-                    src={tomatoHand}
-                    srcSet={tomatoHandSrcSet}
-                    sizes="(max-width: 768px) 100vw, 60vw"
-                    alt="砂鍋粥"
-                    className="w-full h-auto object-cover rounded-lg shadow-organic"
-                  />
+        {/* 蘊火・炊香 Section - Simmering Fire */}
+        <section className="relative w-full">
+          <div className="flex flex-col md:flex-row h-auto md:min-h-[600px]">
+            {/* Left Content Panel - Beige */}
+            <div className="w-full md:w-[35%] bg-[#F2E6D8] relative flex flex-col justify-between py-16 px-8 md:px-12">
+              <div className="flex-grow flex justify-center items-center">
+                <div className="flex flex-col gap-16 py-8 md:py-12">
+                  {/* Title */}
+                  <div className="flex justify-center">
+                    <h2 className="writing-vertical-rl text-[#1e5c36] text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
+                      蘊火・炊香
+                    </h2>
+                  </div>
+                  {/* Description */}
+                  <div className="flex justify-center gap-3 text-[#5c5c5c] text-sm md:text-base tracking-widest leading-loose">
+                    <p className="writing-vertical-rl">仿效古法土鍋炊飯，</p>
+                    <p className="writing-vertical-rl">利用陶鍋燒製過程中產生的氣孔</p>
+                    <p className="writing-vertical-rl">以及砂土的遠紅外線效果，</p>
+                    <p className="writing-vertical-rl">可以使米飯在烹煮過程中溫度穩定、</p>
+                    <p className="writing-vertical-rl">勻速的上升並達到良好的導熱，</p>
+                    <p className="writing-vertical-rl">讓食材從裡到外徹底加熱。</p>
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Reserve Button */}
-            <div className="text-center mt-12">
-              <a
-                href="https://lin.ee/97XgLRz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-[#f5ecd9] text-[#f5ecd9] font-sans text-sm tracking-widest hover:bg-[#f5ecd9] hover:text-[#3d5a4c] transition-colors"
-              >
-                預約品享
-              </a>
+            {/* Right Image Panel */}
+            <div className="w-full md:w-[65%] h-[400px] md:h-auto relative">
+              <img
+                src={tomatoHand} // Reusing image as placeholder
+                srcSet={tomatoHandSrcSet}
+                alt="砂鍋飯"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
+        </section>
+
+        {/* Reserve Button Section */}
+        <section className="py-20 bg-white flex justify-center">
+          <a
+            href="https://lin.ee/97XgLRz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-12 py-3 bg-[#427A5B] text-white text-lg tracking-[0.2em] hover:bg-[#336046] transition-colors duration-300 rounded-sm shadow-md"
+          >
+            預約品享
+          </a>
         </section>
       </main>
 
