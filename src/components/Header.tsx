@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "關於悦納", href: "/about", isRoute: true },
-  { label: "餐飲體驗", href: "#dining", isRoute: false },
+  { label: "餐飲體驗", href: "/dining", isRoute: true },
   { label: "人文空間", href: "#space", isRoute: false },
   { label: "生活美學", href: "#life", isRoute: false },
   { label: "優質選物", href: "#shop", isRoute: false },
