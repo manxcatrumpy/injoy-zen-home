@@ -52,12 +52,12 @@ const Dining = () => {
         <section className="py-24 bg-white text-center">
           <div className="max-w-4xl mx-auto px-6">
             <div className="space-y-12">
-              <p className="text-[#5c5c5c] leading-[2.5] text-lg tracking-wide">
+              <p className="text-muted-foreground leading-[2.5] text-lg tracking-wide">
                 本店嚴選純植物性及原形食物為出發，<br />
                 堅持純手工制作，回歸天然飲食，<br />
                 為我們的健康增添多一層保障，多一份安心。
               </p>
-              <p className="text-[#5c5c5c] leading-[2.5] text-lg tracking-wide">
+              <p className="text-muted-foreground leading-[2.5] text-lg tracking-wide">
                 每日新鮮現煮五行蔬菜湯，在清洗食材浸泡及烹飪料理，<br />
                 都經能量直飲水處理，讓您吃得無負擔、安心有能量！
               </p>
@@ -69,21 +69,21 @@ const Dining = () => {
         <section className="relative w-full">
           <div className="flex flex-col md:flex-row h-auto md:min-h-[600px]">
             {/* Left Content Panel - Beige/Apricot Color */}
-            <div className="w-full md:w-[35%] bg-[#F2E6D8] relative flex flex-col justify-between py-16 px-8 md:px-12">
+            <div className="w-full md:w-[35%] bg-zen-beige relative flex flex-col justify-between py-16 px-8 md:px-12">
 
               {/* Vertical Text Container */}
               <div className="flex-grow flex justify-center items-center">
                 <div className="flex flex-col gap-16 py-8 md:py-12">
                   {/* Title Part - Top */}
                   <div className="flex justify-center">
-                    <h2 className="writing-vertical-rl text-[#1e5c36] text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
+                    <h2 className="writing-vertical-rl text-zen-green text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
                       品悦・納幅
                     </h2>
                   </div>
 
                   {/* Description Part - Bottom */}
                   {/* Stacking paragraphs horizontally (side-by-side) within the bottom block */}
-                  <div className="flex justify-center gap-3 text-[#1e5c36] text-sm md:text-base tracking-widest leading-loose">
+                  <div className="flex justify-center gap-3 text-zen-green text-sm md:text-base tracking-widest leading-loose">
                     <p className="writing-vertical-rl">嚴選當令珍饈，</p>
                     <p className="writing-vertical-rl">以細膩工序演繹四季流轉。</p>
                     <p className="writing-vertical-rl">每一口，</p>
@@ -110,7 +110,12 @@ const Dining = () => {
         <section className="py-20 bg-white flex justify-center">
           <a
             href="#dining-menu"
-            className="px-12 py-3 bg-[#427A5B] text-white text-lg tracking-[0.2em] hover:bg-[#336046] transition-colors duration-300 rounded-sm shadow-md"
+            className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
+                       hover:bg-zen-green-dark hover:shadow-lg
+                       focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
+                       active:scale-[0.98] cursor-pointer
+                       transition-all duration-300 motion-reduce:transition-none
+                       rounded-sm shadow-md"
           >
             查看更多
           </a>
@@ -120,17 +125,17 @@ const Dining = () => {
         <section className="relative w-full">
           <div className="flex flex-col md:flex-row h-auto md:min-h-[600px]">
             {/* Left Content Panel - Beige */}
-            <div className="w-full md:w-[35%] bg-[#F2E6D8] relative flex flex-col justify-between py-16 px-8 md:px-12">
+            <div className="w-full md:w-[35%] bg-zen-beige relative flex flex-col justify-between py-16 px-8 md:px-12">
               <div className="flex-grow flex justify-center items-center">
                 <div className="flex flex-col gap-16 py-8 md:py-12">
                   {/* Title */}
                   <div className="flex justify-center">
-                    <h2 className="writing-vertical-rl text-[#1e5c36] text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
+                    <h2 className="writing-vertical-rl text-zen-green text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
                       真味・日常
                     </h2>
                   </div>
                   {/* Description */}
-                  <div className="flex justify-center gap-3 text-[#5c5c5c] text-sm md:text-base tracking-widest leading-loose">
+                  <div className="flex justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose">
                     <p className="writing-vertical-rl">以慢火熬煮的濃郁與歲月醃漬的甘醇，</p>
                     <p className="writing-vertical-rl">重現記憶中的溫暖滋味。</p>
                     <p className="writing-vertical-rl">這是一份撫慰身心的紮實陪伴，</p>
@@ -156,7 +161,12 @@ const Dining = () => {
         <section className="py-20 bg-white flex justify-center">
           <a
             href="#daily-menu"
-            className="px-12 py-3 bg-[#427A5B] text-white text-lg tracking-[0.2em] hover:bg-[#336046] transition-colors duration-300 rounded-sm shadow-md"
+            className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
+                       hover:bg-zen-green-dark hover:shadow-lg
+                       focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
+                       active:scale-[0.98] cursor-pointer
+                       transition-all duration-300 motion-reduce:transition-none
+                       rounded-sm shadow-md"
           >
             查看更多
           </a>
@@ -166,17 +176,17 @@ const Dining = () => {
         <section className="relative w-full">
           <div className="flex flex-col md:flex-row h-auto md:min-h-[600px]">
             {/* Left Content Panel - Beige */}
-            <div className="w-full md:w-[35%] bg-[#F2E6D8] relative flex flex-col justify-between py-16 px-8 md:px-12">
+            <div className="w-full md:w-[35%] bg-zen-beige relative flex flex-col justify-between py-16 px-8 md:px-12">
               <div className="flex-grow flex justify-center items-center">
                 <div className="flex flex-col gap-16 py-8 md:py-12">
                   {/* Title */}
                   <div className="flex justify-center">
-                    <h2 className="writing-vertical-rl text-[#1e5c36] text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
+                    <h2 className="writing-vertical-rl text-zen-green text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
                       蘊火・炊香
                     </h2>
                   </div>
                   {/* Description */}
-                  <div className="flex justify-center gap-3 text-[#5c5c5c] text-sm md:text-base tracking-widest leading-loose">
+                  <div className="flex justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose">
                     <p className="writing-vertical-rl">仿效古法土鍋炊飯，</p>
                     <p className="writing-vertical-rl">利用陶鍋燒製過程中產生的氣孔</p>
                     <p className="writing-vertical-rl">以及砂土的遠紅外線效果，</p>
@@ -205,7 +215,12 @@ const Dining = () => {
             href="https://lin.ee/97XgLRz"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-12 py-3 bg-[#427A5B] text-white text-lg tracking-[0.2em] hover:bg-[#336046] transition-colors duration-300 rounded-sm shadow-md"
+            className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
+                       hover:bg-zen-green-dark hover:shadow-lg
+                       focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
+                       active:scale-[0.98] cursor-pointer
+                       transition-all duration-300 motion-reduce:transition-none
+                       rounded-sm shadow-md"
           >
             預約品享
           </a>

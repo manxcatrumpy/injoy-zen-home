@@ -54,6 +54,10 @@ export default {
         gold: "hsl(var(--gold))",
         "gold-light": "hsl(var(--gold-light))",
         "warm-gray": "hsl(var(--warm-gray))",
+        // Dining page specific colors
+        "zen-green": "hsl(var(--zen-green))",
+        "zen-green-dark": "hsl(var(--zen-green-dark))",
+        "zen-beige": "hsl(var(--zen-beige))",
       },
       fontFamily: {
         serif: ['Noto Serif TC', 'Playfair Display', 'serif'],
