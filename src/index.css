@@ -64,6 +64,11 @@
     /* Shadows */
     --shadow-soft: 0 4px 30px -8px hsl(45 20% 70% / 0.4);
     --shadow-organic: 0 8px 40px -12px hsl(120 21% 36% / 0.15);
+
+    /* Dining page specific colors */
+    --zen-green: 147 51% 24%; /* #1e5c36 */
+    --zen-green-dark: 147 40% 24%; /* #336046 */
+    --zen-beige: 30 38% 91%; /* #F2E6D8 */
   }
 
   .dark {
