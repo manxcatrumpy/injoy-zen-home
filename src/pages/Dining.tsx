@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MenuLightbox } from "@/components/MenuLightbox";
 
 // Import images with srcset for responsive loading
 import diningHero from "@/assets/dining-hero.jpg";
@@ -15,6 +17,8 @@ import diningFire from "@/assets/dining-fire.png";
 import diningFireSrcSet from "@/assets/dining-fire.png?w=600;1200;1800&format=webp&as=srcset";
 
 const Dining = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden font-sans">
       {/* Skip Link for Accessibility */}
@@ -108,8 +112,8 @@ const Dining = () => {
 
         {/* View More Button Section - Centered */}
         <section className="py-20 bg-white flex justify-center">
-          <a
-            href="#dining-menu"
+          <button
+            onClick={() => setMenuOpen(true)}
             className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
                        hover:bg-zen-green-dark hover:shadow-lg
                        focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
@@ -118,7 +122,7 @@ const Dining = () => {
                        rounded-sm shadow-md"
           >
             查看更多
-          </a>
+          </button>
         </section>
 
         {/* 真味・日常 Section - True Taste */}
@@ -159,8 +163,8 @@ const Dining = () => {
 
         {/* View More Button Section - Daily */}
         <section className="py-20 bg-white flex justify-center">
-          <a
-            href="#daily-menu"
+          <button
+            onClick={() => setMenuOpen(true)}
             className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
                        hover:bg-zen-green-dark hover:shadow-lg
                        focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
@@ -169,7 +173,7 @@ const Dining = () => {
                        rounded-sm shadow-md"
           >
             查看更多
-          </a>
+          </button>
         </section>
 
         {/* 蘊火・炊香 Section - Simmering Fire */}
@@ -229,6 +233,9 @@ const Dining = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* Menu Lightbox */}
+      <MenuLightbox open={menuOpen} onOpenChange={setMenuOpen} />
     </div>
   );
 };
