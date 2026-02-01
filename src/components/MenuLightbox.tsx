@@ -4,7 +4,7 @@ import {
   DialogContent,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { ChevronLeft, ChevronRight, Download } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
@@ -23,9 +23,6 @@ import menuPage11 from "@/assets/menu-pages/menu-page-11.png";
 import menuPage12 from "@/assets/menu-pages/menu-page-12.png";
 import menuPage13 from "@/assets/menu-pages/menu-page-13.png";
 import menuPage14 from "@/assets/menu-pages/menu-page-14.png";
-
-// Import PDF for download
-import menuPdf from "@/assets/menu.pdf";
 
 const menuPages = [
   menuPage01,
@@ -117,15 +114,6 @@ export function MenuLightbox({
     setTouchStart(null);
   };
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = menuPdf;
-    link.download = "injoy-menu.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
@@ -136,20 +124,6 @@ export function MenuLightbox({
         <VisuallyHidden>
           <DialogTitle>菜單</DialogTitle>
         </VisuallyHidden>
-
-        {/* Top Bar - Fixed Height */}
-        <div className="flex-shrink-0 flex items-center px-4 py-3">
-          {/* Download Button */}
-          <button
-            onClick={handleDownload}
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-zen-green text-white hover:bg-zen-green-dark transition-colors cursor-pointer text-sm"
-            aria-label="下載菜單 PDF"
-          >
-            <Download className="w-4 h-4" />
-            <span className="hidden sm:inline">下載菜單</span>
-          </button>
-          {/* Close button is built-in from DialogContent */}
-        </div>
 
         {/* Main Image Container - Flexible Height */}
         <div className="flex-1 relative flex items-center justify-center px-12 min-h-0">
