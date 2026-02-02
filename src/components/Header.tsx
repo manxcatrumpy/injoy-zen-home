@@ -6,9 +6,9 @@ const navItems = [
   { label: "關於悦納", href: "/about", isRoute: true },
   { label: "餐飲體驗", href: "/dining", isRoute: true },
   { label: "人文空間", href: "/space", isRoute: true },
-  { label: "生活美學", href: "#life", isRoute: false },
-  { label: "優質選物", href: "#shop", isRoute: false },
-  { label: "交通資訊", href: "#location", isRoute: false },
+  { label: "生活美學", href: "/life", isRoute: true },
+  { label: "優質選物", href: "/shop", isRoute: true },
+  { label: "交通資訊", href: "/location", isRoute: true },
 ];
 
 // Custom hook for anchor navigation that works across pages

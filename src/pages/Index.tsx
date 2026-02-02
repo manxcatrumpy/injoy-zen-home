@@ -151,6 +151,7 @@ const Index = () => {
           title="生活美學"
           subtitle="Life"
           layoutVariant="image-right"
+          moreLink="/life"
           description={
             <>
               每一次相聚，
@@ -180,6 +181,7 @@ const Index = () => {
           title="優質選物"
           subtitle="Shop"
           layoutVariant="overlay"
+          moreLink="/shop"
           description={
             <>
               延續幸福的質地。
