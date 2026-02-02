@@ -120,6 +120,7 @@ const Index = () => {
           title="人文空間"
           subtitle="Space"
           layoutVariant="image-left-wide"
+          moreLink="/space"
           description={
             <>
               不論獨處或相聚，
