@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logoWithChar from "@/assets/injoy_logo_with_char.png";
 
 const navItems = [
   { label: "首頁", href: "/", isRoute: true },
@@ -65,15 +66,12 @@ export const Header = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-organic transition-transform group-hover:scale-105">
-            <span className="text-primary-foreground font-serif text-sm font-medium">
-              Injoy
-            </span>
-          </div>
-          <span className="font-serif text-xl text-primary font-medium tracking-wide">
-            悦納
-          </span>
+        <Link to="/" className="flex items-center group">
+          <img
+            src={logoWithChar}
+            alt="悅納 Injoy"
+            className="h-12 md:h-14 w-auto transition-transform group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Navigation */}
