@@ -19,7 +19,7 @@ export const HeroSection = () => {
 
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="font-serif text-primary text-2xl md:text-3xl lg:text-4xl leading-relaxed max-w-2xl mx-auto">
+        <h1 className="font-iansui text-primary text-2xl md:text-3xl lg:text-4xl leading-relaxed max-w-2xl mx-auto">
           <span className="block mb-2">滋養會生活的生命，</span>
           <span className="block mb-2">實踐有生命的生活。</span>
           <span className="block text-lg md:text-xl lg:text-2xl mt-6 font-light">
