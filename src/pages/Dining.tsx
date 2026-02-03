@@ -28,9 +28,9 @@ const Dining = () => {
       <Header />
 
       {/* Hero Section - Consistent with About page design */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+      <section className="relative flex flex-col">
+        {/* Background Image with fade effect */}
+        <div className="relative h-[60vh] min-h-[400px]">
           <img
             src={diningHero}
             srcSet={diningHeroSrcSet}
@@ -38,13 +38,13 @@ const Dining = () => {
             alt="精緻餐點擺盤"
             className="w-full h-full object-cover"
           />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background" />
+          {/* Bottom fade gradient */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
 
-        {/* Hero Title */}
-        <div className="absolute bottom-32 left-0 right-0 z-10 text-center">
-          <h1 className="font-serif text-primary text-3xl md:text-4xl lg:text-5xl tracking-widest">
+        {/* Hero Title - Below image, centered */}
+        <div className="bg-background py-8 md:py-10">
+          <h1 className="font-serif text-primary text-3xl md:text-4xl lg:text-5xl tracking-[0.3em] text-center">
             餐飲體驗
           </h1>
         </div>
@@ -53,7 +53,7 @@ const Dining = () => {
       {/* Main Content */}
       <main id="main-content">
         {/* Philosophy Introduction Section */}
-        <section className="py-24 bg-white text-center">
+        <section className="py-24 bg-background text-center">
           <div className="max-w-4xl mx-auto px-6">
             <div className="space-y-12">
               <p className="text-muted-foreground leading-[2.5] text-lg tracking-wide">
@@ -111,7 +111,7 @@ const Dining = () => {
         </section>
 
         {/* View More Button Section - Centered */}
-        <section className="py-20 bg-white flex justify-center">
+        <section className="py-20 bg-background flex justify-center">
           <button
             onClick={() => setMenuOpen(true)}
             className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
@@ -162,7 +162,7 @@ const Dining = () => {
         </section>
 
         {/* View More Button Section - Daily */}
-        <section className="py-20 bg-white flex justify-center">
+        <section className="py-20 bg-background flex justify-center">
           <button
             onClick={() => setMenuOpen(true)}
             className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
@@ -214,7 +214,7 @@ const Dining = () => {
         </section>
 
         {/* Reserve Button Section */}
-        <section className="py-20 bg-white flex justify-center">
+        <section className="py-20 bg-background flex justify-center">
           <a
             href="https://lin.ee/97XgLRz"
             target="_blank"
