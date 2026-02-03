@@ -16,9 +16,9 @@ const Space = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+      <section className="relative flex flex-col">
+        {/* Background Image with fade effect */}
+        <div className="relative h-[60vh] min-h-[400px]">
           <img
             src={restaurantInterior}
             srcSet={restaurantInteriorSrcSet}
@@ -26,13 +26,13 @@ const Space = () => {
             alt="溫馨的人文空間"
             className="w-full h-full object-cover"
           />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background" />
+          {/* Bottom fade gradient */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
 
-        {/* Hero Title */}
-        <div className="absolute bottom-32 left-0 right-0 z-10 text-center">
-          <h1 className="font-serif text-primary text-3xl md:text-4xl lg:text-5xl tracking-widest">
+        {/* Hero Title - Below image, centered */}
+        <div className="bg-background py-8 md:py-10">
+          <h1 className="font-serif text-primary text-3xl md:text-4xl lg:text-5xl tracking-[0.3em] text-center">
             人文空間
           </h1>
         </div>
@@ -41,7 +41,7 @@ const Space = () => {
       {/* Main Content */}
       <main id="main-content">
         {/* Philosophy Introduction Section */}
-        <section className="py-24 bg-white text-center">
+        <section className="py-24 bg-background text-center">
           <div className="max-w-4xl mx-auto px-6">
             <div className="space-y-12">
               <p className="text-muted-foreground leading-[2.5] text-lg tracking-wide">
@@ -62,7 +62,7 @@ const Space = () => {
         </section>
 
         {/* Space Gallery Section - Bento Grid Layout */}
-        <section className="py-8 px-4 md:px-8 bg-white">
+        <section className="py-8 px-4 md:px-8 bg-background">
           <div className="max-w-6xl mx-auto">
             {/* Bento Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
