@@ -61,7 +61,9 @@ export default {
       },
       fontFamily: {
         serif: ['Noto Serif TC', 'Playfair Display', 'serif'],
-        sans: ['Noto Sans TC', 'Lato', 'sans-serif'],
+        sans: ['GenSenRounded', 'Noto Sans TC', 'Lato', 'sans-serif'],
+        noto: ['Noto Sans TC', 'Lato', 'sans-serif'],
+        iansui: ['Iansui', 'Noto Sans TC', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

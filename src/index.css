@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap');
 
+/* 源泉圓體 - GenSenRounded (圓體中文字型) */
+@font-face {
+  font-family: 'GenSenRounded';
+  src: url('/fonts/GenSenRounded2TW-R.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 芫荽 - Iansui (手寫風格中文字型) */
+@font-face {
+  font-family: 'Iansui';
+  src: url('/fonts/Iansui-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,7 +69,7 @@
 
     /* Typography */
     --font-serif: 'Noto Serif TC', 'Playfair Display', serif;
-    --font-sans: 'Noto Sans TC', 'Lato', sans-serif;
+    --font-sans: 'GenSenRounded', 'Noto Sans TC', 'Lato', sans-serif;
 
     /* Organic border-radius presets */
     --blob-1: 60% 40% 30% 70% / 60% 30% 70% 40%;
