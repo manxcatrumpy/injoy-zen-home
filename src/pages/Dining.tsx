@@ -44,7 +44,7 @@ const Dining = () => {
 
         {/* Hero Title - Below image, centered */}
         <div className="bg-background py-8 md:py-10">
-          <h1 className="font-serif text-primary text-3xl md:text-4xl lg:text-5xl tracking-[0.3em] text-center">
+          <h1 className="font-iansui text-primary text-3xl md:text-4xl lg:text-5xl tracking-[0.3em] text-center">
             餐飲體驗
           </h1>
         </div>

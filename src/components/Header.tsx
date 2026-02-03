@@ -83,7 +83,7 @@ export const Header = () => {
               <Link
                 key={item.href}
                 to={item.href}
-                className="text-foreground/80 hover:text-primary font-sans text-sm tracking-wide transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full"
+                className="text-foreground/80 hover:text-primary font-noto text-sm tracking-wide transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full"
               >
                 {item.label}
               </Link>
@@ -92,7 +92,7 @@ export const Header = () => {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleAnchorClick(e, item.href)}
-                className="text-foreground/80 hover:text-primary font-sans text-sm tracking-wide transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full"
+                className="text-foreground/80 hover:text-primary font-noto text-sm tracking-wide transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full"
               >
                 {item.label}
               </a>
@@ -123,7 +123,7 @@ export const Header = () => {
                 key={item.href}
                 to={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-foreground/80 hover:text-primary font-sans text-base py-2 transition-colors"
+                className="text-foreground/80 hover:text-primary font-noto text-base py-2 transition-colors"
               >
                 {item.label}
               </Link>
@@ -135,7 +135,7 @@ export const Header = () => {
                   handleAnchorClick(e, item.href);
                   setIsMobileMenuOpen(false);
                 }}
-                className="text-foreground/80 hover:text-primary font-sans text-base py-2 transition-colors"
+                className="text-foreground/80 hover:text-primary font-noto text-base py-2 transition-colors"
               >
                 {item.label}
               </a>
