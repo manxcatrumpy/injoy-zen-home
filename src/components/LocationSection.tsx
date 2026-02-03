@@ -15,7 +15,7 @@ export const LocationSection = () => {
               新北市板橋區文聖街131號
             </p>
             <p className="text-muted-foreground text-xs">
-              近捷運江子翠站（步行 10-15 分鐘）
+              近捷運江子翠站（步行 10-12 分鐘）
             </p>
             <p className="flex items-center justify-center gap-2">
               <Phone size={16} className="text-primary" />
