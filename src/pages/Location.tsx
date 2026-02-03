@@ -66,7 +66,7 @@ const Location = () => {
                   新北市板橋區文聖街131號
                 </p>
                 <p className="text-muted-foreground text-base tracking-wide mt-1">
-                  近捷運江子翠站（步行 10-15 分鐘）
+                  近捷運江子翠站（步行 10-12 分鐘）
                 </p>
               </div>
 
