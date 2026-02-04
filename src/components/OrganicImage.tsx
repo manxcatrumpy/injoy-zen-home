@@ -16,7 +16,7 @@ interface OrganicImageProps {
 const shapeConfig: Record<ShapeVariant, { borderRadius: string; aspectRatio: string }> = {
   oval: {
     borderRadius: "60% 40% 55% 45% / 70% 65% 35% 30%",
-    aspectRatio: "1/1", // 正方形
+    aspectRatio: "6/7", // 略高的橢圓形
   },
   blob: {
     borderRadius: "55% 45% 60% 40% / 45% 55% 45% 55%",
