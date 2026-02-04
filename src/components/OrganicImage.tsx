@@ -40,7 +40,7 @@ const shapeConfig: Record<ShapeVariant, { borderRadius: string; aspectRatio: str
   },
   "capsule-left": {
     borderRadius: "55% 45% 50% 50% / 70% 70% 40% 40%", // 鵝卵石形，左圓右收
-    aspectRatio: "3/2", // 橫式橢圓
+    aspectRatio: "1/1", // 正方形
   },
   "corner-round": {
     borderRadius: "5% 5% 5% 50% / 5% 5% 5% 50%", // 左下圓弧，其他直角
