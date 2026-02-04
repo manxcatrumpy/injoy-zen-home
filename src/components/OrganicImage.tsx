@@ -16,7 +16,7 @@ interface OrganicImageProps {
 const shapeConfig: Record<ShapeVariant, { borderRadius: string; aspectRatio: string }> = {
   oval: {
     borderRadius: "60% 40% 55% 45% / 70% 65% 35% 30%",
-    aspectRatio: "3/4", // 直式橢圓，適合人像或產品
+    aspectRatio: "1/1", // 正方形
   },
   blob: {
     borderRadius: "55% 45% 60% 40% / 45% 55% 45% 55%",
@@ -32,7 +32,7 @@ const shapeConfig: Record<ShapeVariant, { borderRadius: string; aspectRatio: str
   },
   arch: {
     borderRadius: "50% 50% 0% 0% / 100% 100% 0% 0%",
-    aspectRatio: "4/5", // 拱形門效果
+    aspectRatio: "1/1", // 正方形
   },
   overlap: {
     borderRadius: "50% 50% 55% 45% / 55% 50% 50% 45%",

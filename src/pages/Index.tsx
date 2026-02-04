@@ -139,7 +139,7 @@ const Index = () => {
               sizes="(max-width: 768px) 100vw, 60vw"
               alt="溫馨的用餐空間"
               variant="capsule-left"
-              className="w-full max-w-xl mx-auto"
+              className="w-full max-w-sm mx-auto"
             />
           }
         />
@@ -197,7 +197,7 @@ const Index = () => {
               srcSet={gatheringFriendsSrcSet}
               alt="朋友們的歡樂聚會"
               variant="arch"
-              className="w-full max-w-md mx-auto"
+              className="w-full max-w-sm mx-auto"
             />
           }
         />
