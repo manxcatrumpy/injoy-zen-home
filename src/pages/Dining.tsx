@@ -3,10 +3,17 @@ import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MenuLightbox } from "@/components/MenuLightbox";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 // Import images with srcset for responsive loading
 import diningHero from "@/assets/dining-hero.jpg";
 import diningHeroSrcSet from "@/assets/dining-hero.jpg?w=600;1200;1800&format=webp&as=srcset";
+import fineDiningMenu from "@/assets/fine-dining.png";
 import diningPinyue from "@/assets/dining-pinyue.png";
 import diningPinyueSrcSet from "@/assets/dining-pinyue.png?w=600;1200;1800&format=webp&as=srcset";
 // 真味・日常 section image
@@ -18,6 +25,7 @@ import diningFireSrcSet from "@/assets/dining-fire.png?w=600;1200;1800&format=we
 
 const Dining = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [fineDiningOpen, setFineDiningOpen] = useState(false);
 
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden font-sans">
@@ -69,7 +77,7 @@ const Dining = () => {
           </div>
         </section>
 
-        {/* 品悦・納幅 Section - Beige Background Left, Image Right */}
+        {/* 品悦・納福 Section - Beige Background Left, Image Right */}
         <section className="relative w-full">
           <div className="flex flex-col md:flex-row h-auto md:min-h-[600px]">
             {/* Left Content Panel - Beige/Apricot Color */}
@@ -81,7 +89,7 @@ const Dining = () => {
                   {/* Title Part - Top */}
                   <div className="flex justify-center">
                     <h2 className="writing-vertical-rl text-zen-green text-4xl md:text-5xl font-serif font-bold tracking-[0.2em] max-h-[300px]">
-                      品悦・納幅
+                      品悦・納福
                     </h2>
                   </div>
 
@@ -103,7 +111,7 @@ const Dining = () => {
               <img
                 src={diningPinyue}
                 srcSet={diningPinyueSrcSet}
-                alt="品悦納幅精緻套餐"
+                alt="品悦納福精緻套餐"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -112,17 +120,20 @@ const Dining = () => {
 
         {/* View More Button Section - Centered */}
         <section className="py-20 bg-background flex justify-center">
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
-                       hover:bg-zen-green-dark hover:shadow-lg
-                       focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
-                       active:scale-[0.98] cursor-pointer
-                       transition-all duration-300 motion-reduce:transition-none
-                       rounded-sm shadow-md"
-          >
-            查看更多
-          </button>
+          <div className="flex flex-col items-center gap-3">
+            <span className="text-foreground font-serif text-2xl md:text-3xl tracking-[0.2em]">精緻套餐</span>
+            <button
+              onClick={() => setFineDiningOpen(true)}
+              className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
+                         hover:bg-zen-green-dark hover:shadow-lg
+                         focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
+                         active:scale-[0.98] cursor-pointer
+                         transition-all duration-300 motion-reduce:transition-none
+                         rounded-sm shadow-md"
+            >
+              查看更多
+            </button>
+          </div>
         </section>
 
         {/* 真味・日常 Section - True Taste */}
@@ -163,17 +174,20 @@ const Dining = () => {
 
         {/* View More Button Section - Daily */}
         <section className="py-20 bg-background flex justify-center">
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
-                       hover:bg-zen-green-dark hover:shadow-lg
-                       focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
-                       active:scale-[0.98] cursor-pointer
-                       transition-all duration-300 motion-reduce:transition-none
-                       rounded-sm shadow-md"
-          >
-            查看更多
-          </button>
+          <div className="flex flex-col items-center gap-3">
+            <span className="text-foreground font-serif text-2xl md:text-3xl tracking-[0.2em]">常態套餐</span>
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
+                         hover:bg-zen-green-dark hover:shadow-lg
+                         focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
+                         active:scale-[0.98] cursor-pointer
+                         transition-all duration-300 motion-reduce:transition-none
+                         rounded-sm shadow-md"
+            >
+              查看更多
+            </button>
+          </div>
         </section>
 
         {/* 蘊火・炊香 Section - Simmering Fire */}
@@ -234,8 +248,23 @@ const Dining = () => {
       {/* Footer */}
       <Footer />
 
-      {/* Menu Lightbox */}
+      {/* Menu Lightbox - 常態套餐 */}
       <MenuLightbox open={menuOpen} onOpenChange={setMenuOpen} />
+
+      {/* Fine Dining Lightbox - 精緻套餐 */}
+      <Dialog open={fineDiningOpen} onOpenChange={setFineDiningOpen}>
+        <DialogContent className="max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] h-[90vh] p-0 bg-zen-beige/95 backdrop-blur-sm border-none overflow-hidden flex items-center justify-center">
+          <VisuallyHidden>
+            <DialogTitle>精緻套餐菜單</DialogTitle>
+          </VisuallyHidden>
+          <img
+            src={fineDiningMenu}
+            alt="精緻套餐菜單"
+            className="max-w-full max-h-full object-contain shadow-2xl"
+            draggable={false}
+          />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
