@@ -95,7 +95,7 @@ const Dining = () => {
 
                   {/* Description Part - Bottom */}
                   {/* Stacking paragraphs horizontally (side-by-side) within the bottom block */}
-                  <div className="flex justify-center gap-3 text-zen-green text-sm md:text-base tracking-widest leading-loose">
+                  <div className="flex flex-row-reverse justify-center gap-3 text-zen-green text-sm md:text-base tracking-widest leading-loose">
                     <p className="writing-vertical-rl">嚴選當令珍饈，</p>
                     <p className="writing-vertical-rl">以細膩工序演繹四季流轉。</p>
                     <p className="writing-vertical-rl">每一口，</p>
@@ -150,7 +150,7 @@ const Dining = () => {
                     </h2>
                   </div>
                   {/* Description */}
-                  <div className="flex justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose">
+                  <div className="flex flex-row-reverse justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose">
                     <p className="writing-vertical-rl">以慢火熬煮的濃郁與歲月醃漬的甘醇，</p>
                     <p className="writing-vertical-rl">重現記憶中的溫暖滋味。</p>
                     <p className="writing-vertical-rl">這是一份撫慰身心的紮實陪伴，</p>
@@ -204,7 +204,7 @@ const Dining = () => {
                     </h2>
                   </div>
                   {/* Description */}
-                  <div className="flex justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose">
+                  <div className="flex flex-row-reverse justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose">
                     <p className="writing-vertical-rl">仿效古法土鍋炊飯，</p>
                     <p className="writing-vertical-rl">利用陶鍋燒製過程中產生的氣孔</p>
                     <p className="writing-vertical-rl">以及砂土的遠紅外線效果，</p>
