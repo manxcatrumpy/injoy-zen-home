@@ -6,49 +6,56 @@ import { Footer } from "@/components/Footer";
 import shopHero from "@/assets/Good_01.png";
 import shopHeroSrcSet from "@/assets/Good_01.png?w=600;1200;1800&format=webp&as=srcset";
 
-// Sample product data - replace with actual products
+// Import product images
+import flowerBrew from "@/assets/products/flower-brew.avif";
+import enzyme03 from "@/assets/products/enzyme-03.png";
+import camelliaOil from "@/assets/products/camellia-oil.png";
+import flowerBouquet from "@/assets/products/flower-bouquet.avif";
+import xoSauce from "@/assets/products/xo-sauce.png";
+import cloth from "@/assets/products/cloth.png";
+
 const products = [
   {
     id: 1,
     name: "【心心玫瑰園】",
-    description: "玫瑰花醬",
+    description: "玫瑰花釀",
     price: "NT$330",
-    image: null, // Replace with actual product image
+    image: flowerBrew,
   },
   {
     id: 2,
-    name: "【心心玫瑰園】",
-    description: "玫瑰花醋",
-    price: "NT$399",
-    image: null,
+    name: "【悦納蔬食生活館】",
+    description: "太來酵素",
+    price: "NT$2680",
+    image: enzyme03,
   },
   {
     id: 3,
-    name: "",
-    description: "",
-    price: "",
-    image: null,
+    name: "【悦納蔬食生活館】",
+    description: "苦茶油",
+    price: "NT$1200",
+    image: camelliaOil,
   },
   {
     id: 4,
-    name: "",
-    description: "",
-    price: "",
-    image: null,
+    name: "【心心玫瑰園】",
+    description: "玫瑰花醋",
+    price: "NT$399",
+    image: flowerBouquet,
   },
   {
     id: 5,
-    name: "",
-    description: "",
-    price: "",
-    image: null,
+    name: "【悦納蔬食生活館】",
+    description: "主廚手作XO醬",
+    price: "NT$300",
+    image: xoSauce,
   },
   {
     id: 6,
-    name: "",
-    description: "",
-    price: "",
-    image: null,
+    name: "【悦納蔬食生活館】",
+    description: "布列塔尼酥餅（8入）",
+    price: "NT$360",
+    image: cloth,
   },
 ];
 
@@ -108,36 +115,32 @@ const Shop = () => {
 
         {/* Products Grid Section */}
         <section className="py-16 px-4 md:px-8 bg-background">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-3 gap-6 md:gap-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-3 gap-8 md:gap-12">
               {products.map((product) => (
                 <div key={product.id} className="flex flex-col items-center">
-                  {/* Product Image - Circular */}
-                  <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden mb-4 bg-gradient-to-b from-sky-100 to-sky-50 flex items-end justify-center">
-                    {product.image ? (
-                      <img
-                        src={product.image}
-                        alt={product.description || "商品"}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <ProductPlaceholder />
-                    )}
+                  {/* Product Image - Circular with light gray background */}
+                  <div className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden mb-5 bg-gray-100 shadow-sm">
+                    <img
+                      src={product.image}
+                      alt={product.description}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   {/* Product Info */}
-                  {product.name && (
-                    <div className="text-center">
-                      <p className="text-xs md:text-sm text-muted-foreground tracking-wide">
-                        {product.name}
-                      </p>
-                      <p className="text-sm md:text-base text-foreground font-medium">
-                        {product.description}
-                      </p>
-                      <p className="text-xs md:text-sm text-muted-foreground mt-1">
-                        {product.price}
-                      </p>
-                    </div>
-                  )}
+                  <div className="text-center">
+                    <p className="text-xs md:text-sm text-muted-foreground tracking-wide">
+                      {product.name}
+                    </p>
+                    <p className="text-sm md:text-base text-foreground font-medium mt-0.5">
+                      {product.description}
+                    </p>
+                    <p className="text-sm md:text-base text-muted-foreground mt-1">
+                      {product.price}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -150,31 +153,5 @@ const Shop = () => {
     </div>
   );
 };
-
-// Placeholder component for product images
-const ProductPlaceholder = () => (
-  <svg
-    viewBox="0 0 200 200"
-    className="w-full h-full"
-    preserveAspectRatio="xMidYMax slice"
-  >
-    {/* Cloud */}
-    <ellipse cx="140" cy="50" rx="30" ry="15" fill="white" opacity="0.9" />
-    <ellipse cx="155" cy="47" rx="22" ry="11" fill="white" opacity="0.9" />
-    <ellipse cx="125" cy="49" rx="18" ry="9" fill="white" opacity="0.9" />
-
-    {/* Back hill - lighter green */}
-    <path
-      d="M0 200 Q50 120 100 150 Q150 180 200 130 L200 200 Z"
-      fill="#6B8E4E"
-    />
-
-    {/* Front hill - darker green */}
-    <path
-      d="M0 200 Q40 150 80 175 Q120 200 160 165 Q190 140 200 155 L200 200 Z"
-      fill="#4A7C3A"
-    />
-  </svg>
-);
 
 export default Shop;
