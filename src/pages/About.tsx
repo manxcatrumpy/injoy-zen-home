@@ -6,10 +6,12 @@ import { OrganicImage } from "@/components/OrganicImage";
 // Import images with srcset for responsive loading
 import leavesCloseup from "@/assets/leaves-closeup.png";
 import leavesCloseupSrcSet from "@/assets/leaves-closeup.png?w=400;800;1200;1600&format=webp&as=srcset";
-import restaurantInterior from "@/assets/restaurant-interior.png";
-import restaurantInteriorSrcSet from "@/assets/restaurant-interior.png?w=400;800;1200&format=webp&as=srcset";
-import gatheringFriends from "@/assets/gathering-friends.png";
-import gatheringFriendsSrcSet from "@/assets/gathering-friends.png?w=400;800;1200&format=webp&as=srcset";
+import aboutPeople from "@/assets/about_people.png";
+import aboutPeopleSrcSet from "@/assets/about_people.png?w=400;800;1200;1600&format=webp&as=srcset";
+import aboutThing from "@/assets/about_thing.png";
+import aboutThingSrcSet from "@/assets/about_thing.png?w=400;800;1200&format=webp&as=srcset";
+import aboutObject from "@/assets/about_object.png";
+import aboutObjectSrcSet from "@/assets/about_object.png?w=400;800;1200&format=webp&as=srcset";
 
 const About = () => {
   return (
@@ -52,9 +54,9 @@ const About = () => {
               {/* Left: Image */}
               <div className="w-full md:w-2/5 flex justify-center relative z-10">
                 <OrganicImage
-                  src={leavesCloseup}
-                  srcSet={leavesCloseupSrcSet}
-                  alt="銀杏葉"
+                  src={aboutPeople}
+                  srcSet={aboutPeopleSrcSet}
+                  alt="關於人"
                   variant="oval"
                   className="w-full max-w-sm mx-auto"
                 />
@@ -136,9 +138,9 @@ const About = () => {
               {/* Right: Image */}
               <div className="w-full md:w-2/5 flex justify-center relative z-10">
                 <OrganicImage
-                  src={restaurantInterior}
-                  srcSet={restaurantInteriorSrcSet}
-                  alt="溫馨的用餐空間"
+                  src={aboutThing}
+                  srcSet={aboutThingSrcSet}
+                  alt="關於事"
                   variant="blob"
                   className="w-full max-w-sm mx-auto"
                 />
@@ -154,9 +156,9 @@ const About = () => {
               {/* Left: Image - Family gathering */}
               <div className="w-full md:w-2/5 flex justify-center relative z-10">
                 <OrganicImage
-                  src={gatheringFriends}
-                  srcSet={gatheringFriendsSrcSet}
-                  alt="家人朋友聚餐"
+                  src={aboutObject}
+                  srcSet={aboutObjectSrcSet}
+                  alt="關於物"
                   variant="capsule-left"
                   className="w-full max-w-sm mx-auto"
                 />
