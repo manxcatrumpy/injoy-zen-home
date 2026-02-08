@@ -3,9 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 // Import images with srcset for responsive loading
-// Using signboard as a temporary hero image - replace with actual shop/shelf image
-import signboard from "@/assets/signboard.png";
-import signboardSrcSet from "@/assets/signboard.png?w=600;1200;1800&format=webp&as=srcset";
+import shopHero from "@/assets/Good_01.png";
+import shopHeroSrcSet from "@/assets/Good_01.png?w=600;1200;1800&format=webp&as=srcset";
 
 // Sample product data - replace with actual products
 const products = [
@@ -67,8 +66,8 @@ const Shop = () => {
         {/* Background Image with fade effect */}
         <div className="relative h-[60vh] min-h-[400px]">
           <img
-            src={signboard}
-            srcSet={signboardSrcSet}
+            src={shopHero}
+            srcSet={shopHeroSrcSet}
             sizes="100vw"
             alt="優質選品展示"
             className="w-full h-full object-cover"
