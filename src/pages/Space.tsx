@@ -6,6 +6,20 @@ import { Footer } from "@/components/Footer";
 import restaurantInterior from "@/assets/restaurant-interior.png";
 import restaurantInteriorSrcSet from "@/assets/restaurant-interior.png?w=600;1200;1800&format=webp&as=srcset";
 
+// Humanities gallery images
+import humanities01 from "@/assets/Humanities/Humanities_01.png";
+import humanities01SrcSet from "@/assets/Humanities/Humanities_01.png?w=400;800;1200&format=webp&as=srcset";
+import humanities02 from "@/assets/Humanities/Humanities_02.png";
+import humanities02SrcSet from "@/assets/Humanities/Humanities_02.png?w=600;1134&format=webp&as=srcset";
+import humanities03 from "@/assets/Humanities/Humanities_03.png";
+import humanities03SrcSet from "@/assets/Humanities/Humanities_03.png?w=400;800;1200&format=webp&as=srcset";
+import humanities04 from "@/assets/Humanities/Humanities_04.png";
+import humanities04SrcSet from "@/assets/Humanities/Humanities_04.png?w=400;800;1200&format=webp&as=srcset";
+import humanities05 from "@/assets/Humanities/Humanities_05.png";
+import humanities05SrcSet from "@/assets/Humanities/Humanities_05.png?w=400;800;1200&format=webp&as=srcset";
+import humanities06 from "@/assets/Humanities/Humanities_06.png";
+import humanities06SrcSet from "@/assets/Humanities/Humanities_06.png?w=600;1185&format=webp&as=srcset";
+
 const Space = () => {
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden font-sans">
@@ -61,41 +75,89 @@ const Space = () => {
           </div>
         </section>
 
-        {/* Space Gallery Section - Bento Grid Layout */}
+        {/* Space Gallery Section - Collage Layout */}
         <section className="py-8 px-4 md:px-8 bg-background">
-          <div className="max-w-6xl mx-auto">
-            {/* Bento Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-              {/* Large image - spans 2 columns and 2 rows */}
-              <div className="col-span-1 md:col-span-2 row-span-2 aspect-square md:aspect-auto relative overflow-hidden rounded-lg">
-                <SpaceImagePlaceholder className="w-full h-full" />
+          <div className="max-w-5xl mx-auto">
+            {/*
+              Unified grid: 10 columns x 4 rows
+              Row 1-2: 01 (col 1-4, row 1-2) | 02 (col 5-10, row 1-2)
+              Row 3:   03 (col 1-3, row 3)   | 04 (col 4-6, row 3)   | 06 (col 7-10, row 3-4)
+              Row 4:   05 (col 1-6, row 4)                            | 06 continues
+            */}
+            <div className="grid grid-cols-10 gap-3 md:gap-4">
+              {/* 01 - top left, portrait */}
+              <div className="col-start-1 col-end-5 row-start-1 row-end-3 relative overflow-hidden rounded-lg">
+                <img
+                  src={humanities01}
+                  srcSet={humanities01SrcSet}
+                  sizes="(max-width: 768px) 40vw, 380px"
+                  alt="悦納蔬食生活空間 店面外觀"
+                  className="w-full h-full object-cover aspect-[3/4]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              {/* 02 - top right, wider */}
+              <div className="col-start-5 col-end-11 row-start-1 row-end-3 relative overflow-hidden rounded-lg">
+                <img
+                  src={humanities02}
+                  srcSet={humanities02SrcSet}
+                  sizes="(max-width: 768px) 100vw, 1134px"
+                  alt="悦納室內招牌與蘭花擺設"
+                  className="w-full h-full object-cover object-[85%_center]"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
 
-              {/* Top right image */}
-              <div className="col-span-1 md:col-span-2 aspect-[4/3] relative overflow-hidden rounded-lg">
-                <SpaceImagePlaceholder className="w-full h-full" />
+              {/* 03 - middle left, small */}
+              <div className="col-start-1 col-end-4 row-start-3 row-end-4 relative overflow-hidden rounded-lg">
+                <img
+                  src={humanities03}
+                  srcSet={humanities03SrcSet}
+                  sizes="(max-width: 768px) 30vw, 280px"
+                  alt="牆面裝飾與植栽"
+                  className="w-full h-full object-cover aspect-[4/3]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              {/* 04 - middle center */}
+              <div className="col-start-4 col-end-7 row-start-3 row-end-4 relative overflow-hidden rounded-lg">
+                <img
+                  src={humanities04}
+                  srcSet={humanities04SrcSet}
+                  sizes="(max-width: 768px) 30vw, 280px"
+                  alt="溫馨用餐空間"
+                  className="w-full h-full object-cover aspect-[4/3]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              {/* 06 - right, spans 2 rows (row 3-4) */}
+              <div className="col-start-7 col-end-11 row-start-3 row-end-5 relative overflow-hidden rounded-lg">
+                <img
+                  src={humanities06}
+                  srcSet={humanities06SrcSet}
+                  sizes="(max-width: 768px) 100vw, 1185px"
+                  alt="明亮的玻璃門與座位區"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
 
-              {/* Bottom row - 4 small images on mobile, 2 on the right side on desktop */}
-              <div className="aspect-square relative overflow-hidden rounded-lg">
-                <SpaceImagePlaceholder className="w-full h-full" />
-              </div>
-              <div className="aspect-square relative overflow-hidden rounded-lg">
-                <SpaceImagePlaceholder className="w-full h-full" />
-              </div>
-              <div className="aspect-square relative overflow-hidden rounded-lg">
-                <SpaceImagePlaceholder className="w-full h-full" />
-              </div>
-              <div className="aspect-square relative overflow-hidden rounded-lg">
-                <SpaceImagePlaceholder className="w-full h-full" />
-              </div>
-
-              {/* Wide image at bottom */}
-              <div className="col-span-2 aspect-[2/1] relative overflow-hidden rounded-lg">
-                <SpaceImagePlaceholder className="w-full h-full" />
-              </div>
-              <div className="col-span-2 row-span-2 aspect-auto relative overflow-hidden rounded-lg">
-                <SpaceImagePlaceholder className="w-full h-full min-h-[200px]" />
+              {/* 05 - bottom left, landscape */}
+              <div className="col-start-1 col-end-7 row-start-4 row-end-5 relative overflow-hidden rounded-lg">
+                <img
+                  src={humanities05}
+                  srcSet={humanities05SrcSet}
+                  sizes="(max-width: 768px) 60vw, 570px"
+                  alt="綠意植栽"
+                  className="w-full h-full object-cover object-bottom aspect-[16/9]"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
@@ -108,33 +170,5 @@ const Space = () => {
   );
 };
 
-// Placeholder component for space images (to be replaced with actual images)
-const SpaceImagePlaceholder = ({ className = "" }: { className?: string }) => (
-  <div className={`bg-gradient-to-b from-sky-100 to-sky-50 flex items-end justify-center ${className}`}>
-    {/* Rolling Hills SVG */}
-    <svg
-      viewBox="0 0 400 200"
-      className="w-full h-auto"
-      preserveAspectRatio="xMidYMax slice"
-    >
-      {/* Cloud */}
-      <ellipse cx="280" cy="50" rx="40" ry="20" fill="white" opacity="0.9" />
-      <ellipse cx="300" cy="45" rx="30" ry="15" fill="white" opacity="0.9" />
-      <ellipse cx="260" cy="48" rx="25" ry="12" fill="white" opacity="0.9" />
-
-      {/* Back hill - lighter green */}
-      <path
-        d="M0 200 Q100 100 200 140 Q300 180 400 120 L400 200 Z"
-        fill="#6B8E4E"
-      />
-
-      {/* Front hill - darker green */}
-      <path
-        d="M0 200 Q80 140 160 170 Q240 200 320 160 Q380 130 400 150 L400 200 Z"
-        fill="#4A7C3A"
-      />
-    </svg>
-  </div>
-);
 
 export default Space;
