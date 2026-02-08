@@ -196,7 +196,7 @@ const Index = () => {
               src={gatheringFriends}
               srcSet={gatheringFriendsSrcSet}
               alt="朋友們的歡樂聚會"
-              variant="arch"
+              variant="blob"
               className="w-full max-w-sm mx-auto"
             />
           }
