@@ -2,9 +2,25 @@ import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-// Import images with srcset for responsive loading
-import teaCeremony from "@/assets/tea-ceremony.jpg";
-import teaCeremonySrcSet from "@/assets/tea-ceremony.jpg?w=600;1200;1800&format=webp&as=srcset";
+// Import hero image
+import aestheticsHero from "@/assets/aesthetics/aesthetics_01.png";
+import aestheticsHeroSrcSet from "@/assets/aesthetics/aesthetics_01.png?w=600;1200;1800&format=webp&as=srcset";
+
+// Import gallery images
+import aesthetics02 from "@/assets/aesthetics/aesthetics_02.jpg";
+import aesthetics02SrcSet from "@/assets/aesthetics/aesthetics_02.jpg?w=400;800&format=webp&as=srcset";
+import aesthetics03 from "@/assets/aesthetics/aesthetics_03.png";
+import aesthetics03SrcSet from "@/assets/aesthetics/aesthetics_03.png?w=400;800&format=webp&as=srcset";
+import aesthetics04 from "@/assets/aesthetics/aesthetics_04.png";
+import aesthetics04SrcSet from "@/assets/aesthetics/aesthetics_04.png?w=400;800&format=webp&as=srcset";
+import aesthetics05 from "@/assets/aesthetics/aesthetics_05.png";
+import aesthetics05SrcSet from "@/assets/aesthetics/aesthetics_05.png?w=400;800&format=webp&as=srcset";
+import aesthetics06 from "@/assets/aesthetics/aesthetics_06.png";
+import aesthetics06SrcSet from "@/assets/aesthetics/aesthetics_06.png?w=400;800&format=webp&as=srcset";
+import aesthetics07 from "@/assets/aesthetics/aesthetics_07.png";
+import aesthetics07SrcSet from "@/assets/aesthetics/aesthetics_07.png?w=400;800&format=webp&as=srcset";
+import aesthetics08 from "@/assets/aesthetics/aesthetics_08.png";
+import aesthetics08SrcSet from "@/assets/aesthetics/aesthetics_08.png?w=400;800&format=webp&as=srcset";
 
 const Life = () => {
   return (
@@ -20,10 +36,10 @@ const Life = () => {
         {/* Background Image with fade effect */}
         <div className="relative h-[60vh] min-h-[400px]">
           <img
-            src={teaCeremony}
-            srcSet={teaCeremonySrcSet}
+            src={aestheticsHero}
+            srcSet={aestheticsHeroSrcSet}
             sizes="100vw"
-            alt="茶道美學"
+            alt="生活美學"
             className="w-full h-full object-cover"
           />
           {/* Bottom fade gradient */}
@@ -58,43 +74,98 @@ const Life = () => {
           </div>
         </section>
 
-        {/* Life Gallery Section - Bento Grid Layout */}
+        {/* Life Gallery Section */}
         <section className="py-8 px-4 md:px-8 bg-background">
-          <div className="max-w-6xl mx-auto">
-            {/* Bento Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-              {/* Large image - spans 2 columns and 2 rows */}
-              <div className="col-span-1 md:col-span-2 row-span-2 aspect-square md:aspect-auto relative overflow-hidden rounded-lg">
-                <LifeImagePlaceholder className="w-full h-full" />
-              </div>
+          <div className="max-w-5xl mx-auto flex flex-col gap-3 md:gap-4">
 
-              {/* Top right image */}
-              <div className="col-span-1 md:col-span-2 aspect-[4/3] relative overflow-hidden rounded-lg">
-                <LifeImagePlaceholder className="w-full h-full" />
+            {/* Row 1: 02 | 03 — two large images, equal width */}
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
+              <div className="aspect-[4/3] relative overflow-hidden rounded-2xl">
+                <img
+                  src={aesthetics02}
+                  srcSet={aesthetics02SrcSet}
+                  sizes="(max-width: 768px) 50vw, 40vw"
+                  alt="悦納讀書會活動看板"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
               </div>
-
-              {/* Bottom row - 4 small images on mobile, 2 on the right side on desktop */}
-              <div className="aspect-square relative overflow-hidden rounded-lg">
-                <LifeImagePlaceholder className="w-full h-full" />
-              </div>
-              <div className="aspect-square relative overflow-hidden rounded-lg">
-                <LifeImagePlaceholder className="w-full h-full" />
-              </div>
-              <div className="aspect-square relative overflow-hidden rounded-lg">
-                <LifeImagePlaceholder className="w-full h-full" />
-              </div>
-              <div className="aspect-square relative overflow-hidden rounded-lg">
-                <LifeImagePlaceholder className="w-full h-full" />
-              </div>
-
-              {/* Wide image at bottom */}
-              <div className="col-span-2 aspect-[2/1] relative overflow-hidden rounded-lg">
-                <LifeImagePlaceholder className="w-full h-full" />
-              </div>
-              <div className="col-span-2 row-span-2 aspect-auto relative overflow-hidden rounded-lg">
-                <LifeImagePlaceholder className="w-full h-full min-h-[200px]" />
+              <div className="aspect-[4/3] relative overflow-hidden rounded-2xl">
+                <img
+                  src={aesthetics03}
+                  srcSet={aesthetics03SrcSet}
+                  sizes="(max-width: 768px) 50vw, 40vw"
+                  alt="手作花藝包裝"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
+
+            {/* Rows 2-3: Left (04,05 + 06 wide) + Right tall portraits (07,08) */}
+            <div className="grid grid-cols-4 grid-rows-2 gap-3 md:gap-4">
+              {/* Row 2 left: 04 | 05 */}
+              <div className="aspect-square relative overflow-hidden rounded-2xl">
+                <img
+                  src={aesthetics04}
+                  srcSet={aesthetics04SrcSet}
+                  sizes="(max-width: 768px) 25vw, 20vw"
+                  alt="品酒活動"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="aspect-square relative overflow-hidden rounded-2xl">
+                <img
+                  src={aesthetics05}
+                  srcSet={aesthetics05SrcSet}
+                  sizes="(max-width: 768px) 25vw, 20vw"
+                  alt="歡聚活動紀錄"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Right tall portraits: 07 | 08 — span 2 rows */}
+              <div className="row-span-2 relative overflow-hidden rounded-2xl">
+                <img
+                  src={aesthetics07}
+                  srcSet={aesthetics07SrcSet}
+                  sizes="(max-width: 768px) 25vw, 20vw"
+                  alt="空間一隅"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="row-span-2 relative overflow-hidden rounded-2xl">
+                <img
+                  src={aesthetics08}
+                  srcSet={aesthetics08SrcSet}
+                  sizes="(max-width: 768px) 25vw, 20vw"
+                  alt="茶道體驗"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Row 3 left: 06 — spans 2 columns, same total width as 04+05 */}
+              <div className="col-span-2 aspect-[2/1] relative overflow-hidden rounded-2xl">
+                <img
+                  src={aesthetics06}
+                  srcSet={aesthetics06SrcSet}
+                  sizes="(max-width: 768px) 50vw, 40vw"
+                  alt="茶席品茗"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
           </div>
         </section>
       </main>
@@ -104,34 +175,5 @@ const Life = () => {
     </div>
   );
 };
-
-// Placeholder component for life images (to be replaced with actual images)
-const LifeImagePlaceholder = ({ className = "" }: { className?: string }) => (
-  <div className={`bg-gradient-to-b from-sky-100 to-sky-50 flex items-end justify-center ${className}`}>
-    {/* Rolling Hills SVG */}
-    <svg
-      viewBox="0 0 400 200"
-      className="w-full h-auto"
-      preserveAspectRatio="xMidYMax slice"
-    >
-      {/* Cloud */}
-      <ellipse cx="280" cy="50" rx="40" ry="20" fill="white" opacity="0.9" />
-      <ellipse cx="300" cy="45" rx="30" ry="15" fill="white" opacity="0.9" />
-      <ellipse cx="260" cy="48" rx="25" ry="12" fill="white" opacity="0.9" />
-
-      {/* Back hill - lighter green */}
-      <path
-        d="M0 200 Q100 100 200 140 Q300 180 400 120 L400 200 Z"
-        fill="#6B8E4E"
-      />
-
-      {/* Front hill - darker green */}
-      <path
-        d="M0 200 Q80 140 160 170 Q240 200 320 160 Q380 130 400 150 L400 200 Z"
-        fill="#4A7C3A"
-      />
-    </svg>
-  </div>
-);
 
 export default Life;
