@@ -1,8 +1,14 @@
 import { useState } from "react";
+import { Phone } from "lucide-react";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MenuLightbox } from "@/components/MenuLightbox";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 import {
   Dialog,
   DialogContent,
@@ -229,19 +235,38 @@ const Dining = () => {
 
         {/* Reserve Button Section */}
         <section className="py-20 bg-background flex justify-center">
-          <a
-            href="https://lin.ee/97XgLRz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
-                       hover:bg-zen-green-dark hover:shadow-lg
-                       focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
-                       active:scale-[0.98] cursor-pointer
-                       transition-all duration-300 motion-reduce:transition-none
-                       rounded-sm shadow-md"
-          >
-            預約品享
-          </a>
+          <Popover>
+            <PopoverTrigger asChild>
+              <button
+                className="px-12 py-3 bg-zen-green text-white text-lg tracking-[0.2em]
+                           hover:bg-zen-green-dark hover:shadow-lg
+                           focus:outline-none focus:ring-2 focus:ring-zen-green focus:ring-offset-2
+                           active:scale-[0.98] cursor-pointer
+                           transition-all duration-300 motion-reduce:transition-none
+                           rounded-sm shadow-md"
+              >
+                預約品享
+              </button>
+            </PopoverTrigger>
+            <PopoverContent
+              sideOffset={12}
+              className="w-auto rounded-lg border-primary/20 bg-popover/95 backdrop-blur-sm px-6 py-4 shadow-organic"
+            >
+              <div className="flex flex-col items-center gap-2">
+                <span className="text-muted-foreground text-xs tracking-widest">
+                  電話預約
+                </span>
+                <a
+                  href="tel:+886-2-2250-0166"
+                  className="flex items-center gap-2 text-primary font-serif text-lg tracking-wider
+                             hover:text-zen-green transition-colors"
+                >
+                  <Phone size={16} strokeWidth={1.5} />
+                  02-2250-0166
+                </a>
+              </div>
+            </PopoverContent>
+          </Popover>
         </section>
       </main>
 
