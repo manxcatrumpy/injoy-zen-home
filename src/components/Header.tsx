@@ -142,7 +142,7 @@ export const Header = () => {
           isMobileMenuOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="container mx-auto px-6 py-4 flex flex-col gap-4">
+        <nav className="container mx-auto px-6 py-4 flex flex-col items-center gap-4">
           {navItems.map((item) =>
             item.isRoute ? (
               <Link
@@ -170,7 +170,7 @@ export const Header = () => {
           <a
             href="tel:+886-2-2250-0166"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-foreground/80 hover:text-primary font-noto text-base py-2 transition-colors flex items-center gap-2"
+            className="text-foreground/80 hover:text-primary font-noto text-base py-2 transition-colors flex items-center justify-center gap-2"
           >
             <Phone size={14} strokeWidth={1.5} />
             預約：02-2250-0166
