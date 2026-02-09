@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 import logoWithChar from "@/assets/injoy_logo_with_char.png";
 
 const navItems = [
@@ -11,7 +16,6 @@ const navItems = [
   { label: "生活美學", href: "/life", isRoute: true },
   { label: "優質選物", href: "/shop", isRoute: true },
   { label: "交通資訊", href: "/location", isRoute: true },
-  { label: "預約", href: "/reservation", isRoute: true },
 ];
 
 // Custom hook for anchor navigation that works across pages
@@ -96,6 +100,30 @@ export const Header = () => {
               </a>
             )
           )}
+          <Popover>
+            <PopoverTrigger asChild>
+              <button className="text-foreground/80 hover:text-primary font-noto text-sm tracking-wide transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-primary after:transition-all hover:after:w-full cursor-pointer">
+                預約
+              </button>
+            </PopoverTrigger>
+            <PopoverContent
+              sideOffset={12}
+              className="w-auto rounded-lg border-primary/20 bg-popover/95 backdrop-blur-sm px-6 py-4 shadow-organic"
+            >
+              <div className="flex flex-col items-center gap-2">
+                <span className="text-muted-foreground text-xs tracking-widest">
+                  電話預約
+                </span>
+                <a
+                  href="tel:+886-2-2250-0166"
+                  className="flex items-center gap-2 text-primary font-serif text-lg tracking-wider hover:text-zen-green transition-colors"
+                >
+                  <Phone size={16} strokeWidth={1.5} />
+                  02-2250-0166
+                </a>
+              </div>
+            </PopoverContent>
+          </Popover>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -111,7 +139,7 @@ export const Header = () => {
       {/* Mobile Navigation */}
       <div
         className={`lg:hidden absolute top-full left-0 right-0 glass-header shadow-soft transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          isMobileMenuOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav className="container mx-auto px-6 py-4 flex flex-col gap-4">
@@ -139,6 +167,14 @@ export const Header = () => {
               </a>
             )
           )}
+          <a
+            href="tel:+886-2-2250-0166"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-foreground/80 hover:text-primary font-noto text-base py-2 transition-colors flex items-center gap-2"
+          >
+            <Phone size={14} strokeWidth={1.5} />
+            預約：02-2250-0166
+          </a>
         </nav>
       </div>
     </header>
