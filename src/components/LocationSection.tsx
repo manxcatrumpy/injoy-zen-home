@@ -17,10 +17,13 @@ export const LocationSection = () => {
             <p className="text-muted-foreground text-xs">
               近捷運江子翠站（步行 10-12 分鐘）
             </p>
-            <p className="flex items-center justify-center gap-2">
-              <Phone size={16} className="text-primary" />
-              tel. +886-2-2250-0166
-            </p>
+            <a
+              href="tel:+886-2-2250-0166"
+              className="flex items-center justify-center gap-2 text-primary hover:text-zen-green transition-colors"
+            >
+              <Phone size={16} strokeWidth={1.5} />
+              02-2250-0166
+            </a>
           </div>
         </div>
 
