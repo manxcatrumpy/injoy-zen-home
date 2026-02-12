@@ -14,12 +14,15 @@ export const HeroSection = () => {
           alt="Injoy 悦納 明亮溫馨的空間"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/10 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70" />
       </div>
 
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="font-iansui text-primary text-2xl md:text-3xl lg:text-4xl leading-relaxed max-w-2xl mx-auto">
+        <h1
+          className="font-iansui text-primary text-2xl md:text-3xl lg:text-4xl leading-relaxed max-w-2xl mx-auto"
+          style={{ textShadow: '0 1px 8px hsl(50 20% 96% / 0.6)' }}
+        >
           <span className="block mb-2">滋養會生活的生命</span>
           <span className="block mb-2">實踐有生命的生活</span>
           <span className="block text-lg md:text-xl lg:text-2xl mt-6 font-light">
@@ -31,7 +34,7 @@ export const HeroSection = () => {
       {/* Scroll Indicator */}
       <a
         href="#about"
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary/60 hover:text-primary transition-colors group"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary/80 hover:text-primary transition-colors group"
       >
         <span className="text-xs font-sans tracking-widest">探索</span>
         <ChevronDown 
