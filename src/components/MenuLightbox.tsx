@@ -22,7 +22,6 @@ import menuPage10 from "@/assets/menu-pages/menu-page-10.png";
 import menuPage11 from "@/assets/menu-pages/menu-page-11.png";
 import menuPage12 from "@/assets/menu-pages/menu-page-12.png";
 import menuPage13 from "@/assets/menu-pages/menu-page-13.png";
-import menuPage14 from "@/assets/menu-pages/menu-page-14.png";
 
 const menuPages = [
   menuPage01,
@@ -38,7 +37,6 @@ const menuPages = [
   menuPage11,
   menuPage12,
   menuPage13,
-  menuPage14,
 ];
 
 interface MenuLightboxProps {
