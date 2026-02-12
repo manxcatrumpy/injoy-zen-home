@@ -70,13 +70,13 @@ export const ContentSection = ({
                 <span className="text-sm font-sans tracking-[0.2em] text-muted-foreground uppercase">
                   {number} {subtitle}
                 </span>
-                <h3 className="text-[1.625rem] font-bold text-foreground mt-1">{title}</h3>
+                <h2 className="text-[1.625rem] font-bold text-foreground mt-1">{title}</h2>
               </div>
               {/* Desktop header - above description */}
               <div className="hidden md:block pb-4 mb-6">
-                <h3 className="text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
+                <span className="block text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
                   {number} {subtitle}
-                </h3>
+                </span>
                 <h2 className="text-[2rem] font-bold text-foreground mt-1">{title}</h2>
               </div>
               <div className="text-lg leading-loose text-foreground/80 mb-8 font-light tracking-wide">
@@ -99,9 +99,9 @@ export const ContentSection = ({
             {/* Left: Text (right-aligned on desktop) */}
             <div className="w-full md:w-1/2 text-left md:text-right md:pr-10">
               <div className="pb-4 mb-6 inline-block">
-                <h3 className="text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
+                <span className="block text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
                   {number} {subtitle}
-                </h3>
+                </span>
                 <h2 className="text-[2rem] font-bold text-foreground mt-1">{title}</h2>
               </div>
               <div className="text-lg leading-loose text-foreground/80 mb-6">
@@ -134,9 +134,9 @@ export const ContentSection = ({
             {/* Right: Text */}
             <div className="w-full md:w-2/5 text-left md:pl-10">
               <div className="pb-4 mb-6 inline-block">
-                <h3 className="text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
+                <span className="block text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
                   {number} {subtitle}
-                </h3>
+                </span>
                 <h2 className="text-[2rem] font-bold text-foreground mt-1">{title}</h2>
               </div>
               <div className="text-lg leading-loose text-foreground/80 mb-6">
@@ -159,9 +159,9 @@ export const ContentSection = ({
             {/* Right: Text */}
             <div className="w-full md:w-1/2 text-left md:text-right md:pr-10">
               <div className="pb-4 mb-6 inline-block">
-                <h3 className="text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
+                <span className="block text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
                   {number} {subtitle}
-                </h3>
+                </span>
                 <h2 className="text-[2rem] font-bold text-foreground mt-1">{title}</h2>
               </div>
               <div className="text-lg leading-loose text-foreground/80 mb-6">
@@ -194,9 +194,9 @@ export const ContentSection = ({
             {/* Right: Text */}
             <div className="w-full md:w-1/2 text-left md:pl-10">
               <div className="pb-4 mb-6 inline-block">
-                <h3 className="text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
+                <span className="block text-sm font-sans tracking-[0.2em] uppercase text-muted-foreground">
                   {number} {subtitle}
-                </h3>
+                </span>
                 <h2 className="text-[2rem] font-bold text-foreground mt-1">{title}</h2>
               </div>
               <div className="text-lg leading-loose text-foreground/80 mb-6">
