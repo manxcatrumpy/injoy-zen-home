@@ -1,4 +1,4 @@
-import { MapPin, Phone } from "lucide-react";
+import { ChevronDown, MapPin, Phone } from "lucide-react";
 import signboard from "@/assets/signboard.png";
 
 export const LocationSection = () => {
@@ -56,8 +56,8 @@ export const LocationSection = () => {
         </p>
 
         {/* Arrow */}
-        <div className="text-center text-primary/40">
-          <span className="text-2xl">∨</span>
+        <div className="flex justify-center text-primary/40">
+          <ChevronDown size={28} strokeWidth={1.5} aria-hidden="true" />
         </div>
       </div>
     </section>
