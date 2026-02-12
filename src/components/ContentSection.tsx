@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 type LayoutVariant = "center" | "image-right" | "image-left" | "image-left-wide" | "overlay";
 
@@ -12,6 +13,33 @@ interface ContentSectionProps {
   layoutVariant?: LayoutVariant;
   moreLink?: string;
 }
+
+const linkClassName =
+  "inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-sm hover:text-primary transition-colors uppercase group font-light";
+
+/** Use <Link> for SPA routes (starting with /), <a> for anchors */
+const MoreLink = ({ moreLink, id }: { moreLink?: string; id: string }) => {
+  const target = moreLink || `#${id}`;
+  const content = (
+    <>
+      more <span className="text-xl ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
+    </>
+  );
+
+  if (moreLink?.startsWith("/")) {
+    return (
+      <Link to={moreLink} className={linkClassName}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <a href={target} className={linkClassName}>
+      {content}
+    </a>
+  );
+};
 
 export const ContentSection = ({
   id,
@@ -53,12 +81,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-8 font-light tracking-wide">
                 {description}
               </div>
-              <a
-                href={moreLink || `#${id}`}
-                className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-sm hover:text-primary transition-colors uppercase group font-light"
-              >
-                more <span className="text-xl ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
-              </a>
+              <MoreLink moreLink={moreLink} id={id} />
             </div>
           </div>
         </div>
@@ -83,12 +106,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-6">
                 {description}
               </div>
-              <a
-                href={moreLink || `#${id}`}
-                className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-sm hover:text-primary transition-colors uppercase group font-light"
-              >
-                more <span className="text-xl ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
-              </a>
+              <MoreLink moreLink={moreLink} id={id} />
             </div>
 
             {/* Right: Image */}
@@ -123,12 +141,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-6">
                 {description}
               </div>
-              <a
-                href={moreLink || `#${id}`}
-                className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-sm hover:text-primary transition-colors uppercase group font-light"
-              >
-                more <span className="text-xl ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
-              </a>
+              <MoreLink moreLink={moreLink} id={id} />
             </div>
           </div>
         </div>
@@ -153,12 +166,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-6">
                 {description}
               </div>
-              <a
-                href={moreLink || `#${id}`}
-                className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-sm hover:text-primary transition-colors uppercase group font-light"
-              >
-                more <span className="text-xl ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
-              </a>
+              <MoreLink moreLink={moreLink} id={id} />
             </div>
 
             {/* Left: Image */}
@@ -193,12 +201,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-6">
                 {description}
               </div>
-              <a
-                href={moreLink || `#${id}`}
-                className="inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-sm hover:text-primary transition-colors uppercase group font-light"
-              >
-                more <span className="text-xl ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
-              </a>
+              <MoreLink moreLink={moreLink} id={id} />
             </div>
           </div>
         </div>
