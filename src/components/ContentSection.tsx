@@ -18,8 +18,9 @@ const linkClassName =
   "inline-flex items-center text-muted-foreground font-sans tracking-[0.2em] text-sm hover:text-primary transition-colors uppercase group font-light";
 
 /** Use <Link> for SPA routes (starting with /), <a> for anchors */
-const MoreLink = ({ moreLink, id }: { moreLink?: string; id: string }) => {
+const MoreLink = ({ moreLink, id, title }: { moreLink?: string; id: string; title: string }) => {
   const target = moreLink || `#${id}`;
+  const ariaLabel = `了解更多${title}`;
   const content = (
     <>
       more <span className="text-xl ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
@@ -28,14 +29,14 @@ const MoreLink = ({ moreLink, id }: { moreLink?: string; id: string }) => {
 
   if (moreLink?.startsWith("/")) {
     return (
-      <Link to={moreLink} className={linkClassName}>
+      <Link to={moreLink} className={linkClassName} aria-label={ariaLabel}>
         {content}
       </Link>
     );
   }
 
   return (
-    <a href={target} className={linkClassName}>
+    <a href={target} className={linkClassName} aria-label={ariaLabel}>
       {content}
     </a>
   );
@@ -81,7 +82,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-8 font-light tracking-wide">
                 {description}
               </div>
-              <MoreLink moreLink={moreLink} id={id} />
+              <MoreLink moreLink={moreLink} id={id} title={title} />
             </div>
           </div>
         </div>
@@ -106,7 +107,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-6">
                 {description}
               </div>
-              <MoreLink moreLink={moreLink} id={id} />
+              <MoreLink moreLink={moreLink} id={id} title={title} />
             </div>
 
             {/* Right: Image */}
@@ -141,7 +142,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-6">
                 {description}
               </div>
-              <MoreLink moreLink={moreLink} id={id} />
+              <MoreLink moreLink={moreLink} id={id} title={title} />
             </div>
           </div>
         </div>
@@ -166,7 +167,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-6">
                 {description}
               </div>
-              <MoreLink moreLink={moreLink} id={id} />
+              <MoreLink moreLink={moreLink} id={id} title={title} />
             </div>
 
             {/* Left: Image */}
@@ -201,7 +202,7 @@ export const ContentSection = ({
               <div className="text-lg leading-loose text-foreground/80 mb-6">
                 {description}
               </div>
-              <MoreLink moreLink={moreLink} id={id} />
+              <MoreLink moreLink={moreLink} id={id} title={title} />
             </div>
           </div>
         </div>
