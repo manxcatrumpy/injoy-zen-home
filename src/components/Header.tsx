@@ -39,11 +39,75 @@ const useAnchorNavigation = () => {
   return { handleAnchorClick, isHomePage };
 };
 
+// Focus trap hook for mobile menu accessibility
+const useFocusTrap = (isActive: boolean, containerRef: React.RefObject<HTMLElement | null>) => {
+  useEffect(() => {
+    if (!isActive || !containerRef.current) return;
+
+    const container = containerRef.current;
+    const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+
+      const focusableElements = container.querySelectorAll<HTMLElement>(focusableSelector);
+      if (focusableElements.length === 0) return;
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (e.shiftKey) {
+        // Shift+Tab: if on first element, wrap to last
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        // Tab: if on last element, wrap to first
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    };
+
+    container.addEventListener("keydown", handleKeyDown);
+    return () => container.removeEventListener("keydown", handleKeyDown);
+  }, [isActive, containerRef]);
+};
+
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const ticking = useRef(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const { handleAnchorClick } = useAnchorNavigation();
+
+  // Focus trap for mobile menu
+  useFocusTrap(isMobileMenuOpen, mobileMenuRef);
+
+  // Close mobile menu on Escape key
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        // Return focus to the menu toggle button
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isMobileMenuOpen]);
+
+  // Close mobile menu on route change
+  const location = useLocation();
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   const updateScrollState = useCallback(() => {
     setIsScrolled(window.scrollY > 50);
@@ -126,11 +190,14 @@ export const Header = () => {
           </Popover>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - 44x44px minimum touch target */}
         <button
+          ref={menuButtonRef}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
-          aria-label="Toggle menu"
+          className="lg:hidden p-2.5 -mr-1 min-w-[44px] min-h-[44px] flex items-center justify-center text-foreground hover:text-primary transition-colors"
+          aria-label={isMobileMenuOpen ? "關閉選單" : "開啟選單"}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-nav"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -138,6 +205,12 @@ export const Header = () => {
 
       {/* Mobile Navigation */}
       <div
+        ref={mobileMenuRef}
+        id="mobile-nav"
+        role="dialog"
+        aria-label="行動版導覽選單"
+        aria-modal={isMobileMenuOpen}
+        {...(!isMobileMenuOpen && { inert: "" as unknown as string })}
         className={`lg:hidden absolute top-full left-0 right-0 glass-header shadow-soft transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
         }`}
