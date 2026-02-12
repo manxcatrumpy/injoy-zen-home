@@ -101,12 +101,12 @@ const Dining = () => {
 
                   {/* Description Part - Bottom */}
                   {/* Stacking paragraphs horizontally (side-by-side) within the bottom block */}
-                  <div className="flex flex-row-reverse justify-center gap-3 text-zen-green text-sm md:text-base tracking-widest leading-loose">
-                    <p className="writing-vertical-rl">嚴選當令珍饈，</p>
-                    <p className="writing-vertical-rl">以細膩工序演繹四季流轉。</p>
-                    <p className="writing-vertical-rl">每一口，</p>
-                    <p className="writing-vertical-rl">都是對天地厚賜的歡喜接納，</p>
-                    <p className="writing-vertical-rl">為身心注入圓滿的幸福能量。</p>
+                  <div className="flex flex-row-reverse flex-wrap justify-center gap-3 text-zen-green text-sm md:text-base tracking-widest leading-loose overflow-hidden">
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">嚴選當令珍饈，</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">以細膩工序演繹四季流轉。</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">每一口，</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">都是對天地厚賜的歡喜接納，</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">為身心注入圓滿的幸福能量。</p>
                   </div>
                 </div>
               </div>
@@ -156,12 +156,12 @@ const Dining = () => {
                     </h2>
                   </div>
                   {/* Description */}
-                  <div className="flex flex-row-reverse justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose">
-                    <p className="writing-vertical-rl">以慢火熬煮的濃郁與歲月醃漬的甘醇，</p>
-                    <p className="writing-vertical-rl">重現記憶中的溫暖滋味。</p>
-                    <p className="writing-vertical-rl">這是一份撫慰身心的紮實陪伴，</p>
-                    <p className="writing-vertical-rl">讓每一餐，</p>
-                    <p className="writing-vertical-rl">都成為安心的歸屬。</p>
+                  <div className="flex flex-row-reverse flex-wrap justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose overflow-hidden">
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">以慢火熬煮的濃郁與歲月醃漬的甘醇，</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">重現記憶中的溫暖滋味。</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">這是一份撫慰身心的紮實陪伴，</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">讓每一餐，</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">都成為安心的歸屬。</p>
                   </div>
                 </div>
               </div>
@@ -210,13 +210,13 @@ const Dining = () => {
                     </h2>
                   </div>
                   {/* Description */}
-                  <div className="flex flex-row-reverse justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose">
-                    <p className="writing-vertical-rl">仿效古法土鍋炊飯，</p>
-                    <p className="writing-vertical-rl">利用陶鍋燒製過程中產生的氣孔</p>
-                    <p className="writing-vertical-rl">以及砂土的遠紅外線效果，</p>
-                    <p className="writing-vertical-rl">可以使米飯在烹煮過程中溫度穩定、</p>
-                    <p className="writing-vertical-rl">勻速的上升並達到良好的導熱，</p>
-                    <p className="writing-vertical-rl">讓食材從裡到外徹底加熱。</p>
+                  <div className="flex flex-row-reverse flex-wrap justify-center gap-3 text-muted-foreground text-sm md:text-base tracking-widest leading-loose overflow-hidden">
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">仿效古法土鍋炊飯，</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">利用陶鍋燒製過程中產生的氣孔</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">以及砂土的遠紅外線效果，</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">可以使米飯在烹煮過程中溫度穩定、</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">勻速的上升並達到良好的導熱，</p>
+                    <p className="writing-vertical-rl max-h-[50vh] md:max-h-[350px]">讓食材從裡到外徹底加熱。</p>
                   </div>
                 </div>
               </div>

@@ -258,19 +258,24 @@
     text-wrap: balance;
   }
 
-  /* Vertical writing mode for traditional Chinese text */
+  /* Vertical writing mode for traditional Chinese text
+     - overflow-wrap prevents long unbreakable strings from overflowing
+     - word-break: keep-all preserves CJK word boundaries */
   .writing-vertical {
     writing-mode: vertical-rl;
     text-orientation: mixed;
+    overflow-wrap: break-word;
   }
 
   .writing-vertical-rl {
     writing-mode: vertical-rl;
     text-orientation: mixed;
+    overflow-wrap: break-word;
   }
 
   .writing-vertical-lr {
     writing-mode: vertical-lr;
     text-orientation: mixed;
+    overflow-wrap: break-word;
   }
 }
