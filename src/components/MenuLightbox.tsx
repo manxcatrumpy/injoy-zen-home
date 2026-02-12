@@ -7,6 +7,7 @@ import {
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { ZoomableImage } from "@/components/ZoomableImage";
 
 // Import menu page images
 import menuPage01 from "@/assets/menu-pages/menu-page-01.png";
@@ -52,7 +53,6 @@ export function MenuLightbox({
 }: MenuLightboxProps) {
   const [currentPage, setCurrentPage] = useState(initialPage);
   const [isLoading, setIsLoading] = useState(true);
-  const [touchStart, setTouchStart] = useState<number | null>(null);
 
   // Reset to initial page when opening
   useEffect(() => {
@@ -90,73 +90,39 @@ export function MenuLightbox({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [open, goToPrevious, goToNext, onOpenChange]);
 
-  // Touch swipe handling
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.touches[0].clientX);
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStart === null) return;
-
-    const touchEnd = e.changedTouches[0].clientX;
-    const diff = touchStart - touchEnd;
-
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        goToNext();
-      } else {
-        goToPrevious();
-      }
-    }
-
-    setTouchStart(null);
-  };
-
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         className="max-w-[95vw] md:max-w-[90vw] lg:max-w-[85vw] h-[95vh] p-0 bg-zen-beige/95 backdrop-blur-sm border-none overflow-hidden flex flex-col"
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
       >
         <VisuallyHidden>
           <DialogTitle>菜單</DialogTitle>
         </VisuallyHidden>
 
         {/* Main Image Container - Flexible Height */}
-        <div className="flex-1 relative flex items-center justify-center px-12 min-h-0">
+        <div className="flex-1 relative px-12 min-h-0">
           {/* Previous Button */}
           <button
             onClick={goToPrevious}
-            className="absolute left-2 md:left-4 z-40 p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-zen-green shadow-lg transition-all hover:scale-105 cursor-pointer"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-40 p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-zen-green shadow-lg transition-all hover:scale-105 cursor-pointer"
             aria-label="上一頁"
           >
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
           </button>
 
-          {/* Image */}
-          <div className="relative w-full h-full flex items-center justify-center">
-            {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-10 h-10 border-4 border-zen-green/30 border-t-zen-green rounded-full animate-spin" />
-              </div>
-            )}
-            <img
-              src={menuPages[currentPage]}
-              alt={`菜單第 ${currentPage + 1} 頁`}
-              className={cn(
-                "max-w-full max-h-full object-contain shadow-2xl transition-opacity duration-300",
-                isLoading ? "opacity-0" : "opacity-100"
-              )}
-              onLoad={() => setIsLoading(false)}
-              draggable={false}
-            />
-          </div>
+          {/* Zoomable Image */}
+          <ZoomableImage
+            src={menuPages[currentPage]}
+            alt={`菜單第 ${currentPage + 1} 頁`}
+            resetKey={currentPage}
+            isLoading={isLoading}
+            onLoad={() => setIsLoading(false)}
+          />
 
           {/* Next Button */}
           <button
             onClick={goToNext}
-            className="absolute right-2 md:right-4 z-40 p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-zen-green shadow-lg transition-all hover:scale-105 cursor-pointer"
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-40 p-2 md:p-3 rounded-full bg-white/80 hover:bg-white text-zen-green shadow-lg transition-all hover:scale-105 cursor-pointer"
             aria-label="下一頁"
           >
             <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />

@@ -15,6 +15,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { ZoomableImage } from "@/components/ZoomableImage";
 
 // Import images with srcset for responsive loading
 import diningHero from "@/assets/dining-hero.jpg";
@@ -278,15 +279,14 @@ const Dining = () => {
 
       {/* Fine Dining Lightbox - 精緻套餐 */}
       <Dialog open={fineDiningOpen} onOpenChange={setFineDiningOpen}>
-        <DialogContent className="max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] h-[90vh] p-0 bg-zen-beige/95 backdrop-blur-sm border-none overflow-hidden flex items-center justify-center">
+        <DialogContent className="max-w-[95vw] md:max-w-[85vw] lg:max-w-[75vw] h-[90vh] p-0 bg-zen-beige/95 backdrop-blur-sm border-none overflow-hidden">
           <VisuallyHidden>
             <DialogTitle>精緻套餐菜單</DialogTitle>
           </VisuallyHidden>
-          <img
+          <ZoomableImage
             src={fineDiningMenu}
             alt="精緻套餐菜單"
-            className="max-w-full max-h-full object-contain shadow-2xl"
-            draggable={false}
+            resetKey={fineDiningOpen ? "open" : "closed"}
           />
         </DialogContent>
       </Dialog>
