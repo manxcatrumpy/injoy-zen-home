@@ -8,20 +8,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
-// Import menu page images
-import menuPage01 from "@/assets/menu-pages/menu-page-01.png";
-import menuPage02 from "@/assets/menu-pages/menu-page-02.png";
-import menuPage03 from "@/assets/menu-pages/menu-page-03.png";
-import menuPage04 from "@/assets/menu-pages/menu-page-04.png";
-import menuPage05 from "@/assets/menu-pages/menu-page-05.png";
-import menuPage06 from "@/assets/menu-pages/menu-page-06.png";
-import menuPage07 from "@/assets/menu-pages/menu-page-07.png";
-import menuPage08 from "@/assets/menu-pages/menu-page-08.png";
-import menuPage09 from "@/assets/menu-pages/menu-page-09.png";
-import menuPage10 from "@/assets/menu-pages/menu-page-10.png";
-import menuPage11 from "@/assets/menu-pages/menu-page-11.png";
-import menuPage12 from "@/assets/menu-pages/menu-page-12.png";
-import menuPage13 from "@/assets/menu-pages/menu-page-13.png";
+// Import menu page images (optimized to WebP)
+import menuPage01 from "@/assets/menu-pages/menu-page-01.png?w=1200&format=webp";
+import menuPage02 from "@/assets/menu-pages/menu-page-02.png?w=1200&format=webp";
+import menuPage03 from "@/assets/menu-pages/menu-page-03.png?w=1200&format=webp";
+import menuPage04 from "@/assets/menu-pages/menu-page-04.png?w=1200&format=webp";
+import menuPage05 from "@/assets/menu-pages/menu-page-05.png?w=1200&format=webp";
+import menuPage06 from "@/assets/menu-pages/menu-page-06.png?w=1200&format=webp";
+import menuPage07 from "@/assets/menu-pages/menu-page-07.png?w=1200&format=webp";
+import menuPage08 from "@/assets/menu-pages/menu-page-08.png?w=1200&format=webp";
+import menuPage09 from "@/assets/menu-pages/menu-page-09.png?w=1200&format=webp";
+import menuPage10 from "@/assets/menu-pages/menu-page-10.png?w=1200&format=webp";
+import menuPage11 from "@/assets/menu-pages/menu-page-11.png?w=1200&format=webp";
+import menuPage12 from "@/assets/menu-pages/menu-page-12.png?w=1200&format=webp";
+import menuPage13 from "@/assets/menu-pages/menu-page-13.png?w=1200&format=webp";
 
 const menuPages = [
   menuPage01,

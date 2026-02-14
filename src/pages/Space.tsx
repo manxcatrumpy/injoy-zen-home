@@ -2,22 +2,22 @@ import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-// Import images with srcset for responsive loading
-import restaurantInterior from "@/assets/restaurant-interior.png";
+// Import images with WebP fallback (src) and responsive srcSet
+import restaurantInterior from "@/assets/restaurant-interior.png?w=1200&format=webp";
 import restaurantInteriorSrcSet from "@/assets/restaurant-interior.png?w=600;1200;1800&format=webp&as=srcset";
 
 // Humanities gallery images
-import humanities01 from "@/assets/Humanities/Humanities_01.png";
+import humanities01 from "@/assets/Humanities/Humanities_01.png?w=800&format=webp";
 import humanities01SrcSet from "@/assets/Humanities/Humanities_01.png?w=400;800;1200&format=webp&as=srcset";
-import humanities02 from "@/assets/Humanities/Humanities_02.png";
+import humanities02 from "@/assets/Humanities/Humanities_02.png?w=800&format=webp";
 import humanities02SrcSet from "@/assets/Humanities/Humanities_02.png?w=600;1134&format=webp&as=srcset";
-import humanities03 from "@/assets/Humanities/Humanities_03.png";
+import humanities03 from "@/assets/Humanities/Humanities_03.png?w=800&format=webp";
 import humanities03SrcSet from "@/assets/Humanities/Humanities_03.png?w=400;800;1200&format=webp&as=srcset";
-import humanities04 from "@/assets/Humanities/Humanities_04.png";
+import humanities04 from "@/assets/Humanities/Humanities_04.png?w=800&format=webp";
 import humanities04SrcSet from "@/assets/Humanities/Humanities_04.png?w=400;800;1200&format=webp&as=srcset";
-import humanities05 from "@/assets/Humanities/Humanities_05.png";
+import humanities05 from "@/assets/Humanities/Humanities_05.png?w=800&format=webp";
 import humanities05SrcSet from "@/assets/Humanities/Humanities_05.png?w=400;800;1200&format=webp&as=srcset";
-import humanities06 from "@/assets/Humanities/Humanities_06.png";
+import humanities06 from "@/assets/Humanities/Humanities_06.png?w=800&format=webp";
 import humanities06SrcSet from "@/assets/Humanities/Humanities_06.png?w=600;1185&format=webp&as=srcset";
 
 const Space = () => {

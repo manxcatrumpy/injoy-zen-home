@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import heroCafe from "@/assets/hero-cafe.png";
+import heroCafeWebp from "@/assets/hero-cafe.png?w=1600&format=webp";
 import heroCafeSrcSet from "@/assets/hero-cafe.png?w=800;1600;2400&format=webp&as=srcset";
 
 export const HeroSection = () => {
@@ -8,11 +8,14 @@ export const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroCafe}
+          src={heroCafeWebp}
           srcSet={heroCafeSrcSet}
           sizes="100vw"
           alt="Injoy 悦納 明亮溫馨的空間"
           className="w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70" />
       </div>

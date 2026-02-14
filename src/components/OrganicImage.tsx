@@ -10,6 +10,8 @@ interface OrganicImageProps {
   variant: ShapeVariant;
   className?: string;
   overlayElement?: ReactNode;
+  loading?: "lazy" | "eager";
+  fetchPriority?: "high" | "low" | "auto";
 }
 
 // Shape styles with recommended aspect ratios for consistent appearance
@@ -56,6 +58,8 @@ export const OrganicImage = ({
   variant,
   className = "",
   overlayElement,
+  loading = "lazy",
+  fetchPriority,
 }: OrganicImageProps) => {
   const config = shapeConfig[variant];
 
@@ -82,8 +86,9 @@ export const OrganicImage = ({
           srcSet={srcSet}
           sizes={sizes}
           alt={alt}
-          loading="lazy"
+          loading={loading}
           decoding="async"
+          fetchPriority={fetchPriority}
           className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
         />
       </div>

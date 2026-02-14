@@ -16,17 +16,17 @@ import {
 } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
-// Import images with srcset for responsive loading
-import diningHero from "@/assets/dining-hero.jpg";
+// Import images with WebP fallback (src) and responsive srcSet
+import diningHero from "@/assets/dining-hero.jpg?w=1200&format=webp";
 import diningHeroSrcSet from "@/assets/dining-hero.jpg?w=600;1200;1800&format=webp&as=srcset";
-import fineDiningMenu from "@/assets/fine-dining.png";
-import diningPinyue from "@/assets/dining-pinyue.png";
+import fineDiningMenu from "@/assets/fine-dining.png?w=1200&format=webp";
+import diningPinyue from "@/assets/dining-pinyue.png?w=1200&format=webp";
 import diningPinyueSrcSet from "@/assets/dining-pinyue.png?w=600;1200;1800&format=webp&as=srcset";
 // 真味・日常 section image
-import diningTruetaste from "@/assets/dining-truetaest.png";
+import diningTruetaste from "@/assets/dining-truetaest.png?w=1200&format=webp";
 import diningTruetasteSrcSet from "@/assets/dining-truetaest.png?w=600;1200;1800&format=webp&as=srcset";
 // 蘊火・炊香 section image
-import diningFire from "@/assets/dining-fire.png";
+import diningFire from "@/assets/dining-fire.png?w=1200&format=webp";
 import diningFireSrcSet from "@/assets/dining-fire.png?w=600;1200;1800&format=webp&as=srcset";
 
 const Dining = () => {
