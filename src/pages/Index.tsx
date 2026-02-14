@@ -9,17 +9,18 @@ import { OrganicImage } from "@/components/OrganicImage";
 import { LocationSection } from "@/components/LocationSection";
 import { Footer } from "@/components/Footer";
 
-// Import images with srcset for responsive loading
-// Format: ?w=sizes&format=webp&as=srcset generates multiple sizes in WebP format
-import leavesCloseup from "@/assets/leaves-closeup.png";
+// Import images with WebP fallback (src) and responsive srcSet
+// Format: ?w=size&format=webp → single WebP for src fallback
+// Format: ?w=sizes&format=webp&as=srcset → multiple sizes for srcSet
+import leavesCloseup from "@/assets/leaves-closeup.png?w=800&format=webp";
 import leavesCloseupSrcSet from "@/assets/leaves-closeup.png?w=400;800;1200&format=webp&as=srcset";
-import tomatoHand from "@/assets/tomato-hand.jpg";
+import tomatoHand from "@/assets/tomato-hand.jpg?w=800&format=webp";
 import tomatoHandSrcSet from "@/assets/tomato-hand.jpg?w=400;800;1200&format=webp&as=srcset";
-import restaurantInterior from "@/assets/restaurant-interior.png";
+import restaurantInterior from "@/assets/restaurant-interior.png?w=1200&format=webp";
 import restaurantInteriorSrcSet from "@/assets/restaurant-interior.png?w=600;1200;1800&format=webp&as=srcset";
-import teaCeremony from "@/assets/tea-ceremony.jpg";
+import teaCeremony from "@/assets/tea-ceremony.jpg?w=800&format=webp";
 import teaCeremonySrcSet from "@/assets/tea-ceremony.jpg?w=400;800;1200&format=webp&as=srcset";
-import gatheringFriends from "@/assets/gathering-friends.png";
+import gatheringFriends from "@/assets/gathering-friends.png?w=800&format=webp";
 import gatheringFriendsSrcSet from "@/assets/gathering-friends.png?w=400;800;1200&format=webp&as=srcset";
 
 const Index = () => {

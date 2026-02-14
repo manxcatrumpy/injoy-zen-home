@@ -2,17 +2,17 @@ import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-// Import images with srcset for responsive loading
-import shopHero from "@/assets/Good_01.png";
+// Import images with WebP fallback (src) and responsive srcSet
+import shopHero from "@/assets/Good_01.png?w=1200&format=webp";
 import shopHeroSrcSet from "@/assets/Good_01.png?w=600;1200;1800&format=webp&as=srcset";
 
-// Import product images
+// Import product images (optimized to WebP; AVIF files kept as-is since already optimized)
 import flowerBrew from "@/assets/products/flower-brew.avif";
-import enzyme03 from "@/assets/products/enzyme-03.png";
-import camelliaOil from "@/assets/products/camellia-oil.png";
+import enzyme03 from "@/assets/products/enzyme-03.png?w=600&format=webp";
+import camelliaOil from "@/assets/products/camellia-oil.png?w=600&format=webp";
 import flowerBouquet from "@/assets/products/flower-bouquet.avif";
-import xoSauce from "@/assets/products/xo-sauce.png";
-import cloth from "@/assets/products/cloth.png";
+import xoSauce from "@/assets/products/xo-sauce.png?w=600&format=webp";
+import cloth from "@/assets/products/cloth.png?w=600&format=webp";
 
 const products = [
   {

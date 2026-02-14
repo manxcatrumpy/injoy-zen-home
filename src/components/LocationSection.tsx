@@ -1,5 +1,5 @@
 import { ChevronDown, MapPin, Phone } from "lucide-react";
-import signboard from "@/assets/signboard.png";
+import signboard from "@/assets/signboard.png?w=800&format=webp";
 
 export const LocationSection = () => {
   return (

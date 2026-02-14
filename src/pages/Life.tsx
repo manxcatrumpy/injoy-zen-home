@@ -2,24 +2,24 @@ import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-// Import hero image
-import aestheticsHero from "@/assets/aesthetics/aesthetics_01.png";
+// Import hero image with WebP fallback
+import aestheticsHero from "@/assets/aesthetics/aesthetics_01.png?w=1200&format=webp";
 import aestheticsHeroSrcSet from "@/assets/aesthetics/aesthetics_01.png?w=600;1200;1800&format=webp&as=srcset";
 
-// Import gallery images
-import aesthetics02 from "@/assets/aesthetics/aesthetics_02.jpg";
+// Import gallery images with WebP fallback
+import aesthetics02 from "@/assets/aesthetics/aesthetics_02.jpg?w=800&format=webp";
 import aesthetics02SrcSet from "@/assets/aesthetics/aesthetics_02.jpg?w=400;800&format=webp&as=srcset";
-import aesthetics03 from "@/assets/aesthetics/aesthetics_03.png";
+import aesthetics03 from "@/assets/aesthetics/aesthetics_03.png?w=800&format=webp";
 import aesthetics03SrcSet from "@/assets/aesthetics/aesthetics_03.png?w=400;800&format=webp&as=srcset";
-import aesthetics04 from "@/assets/aesthetics/aesthetics_04.png";
+import aesthetics04 from "@/assets/aesthetics/aesthetics_04.png?w=800&format=webp";
 import aesthetics04SrcSet from "@/assets/aesthetics/aesthetics_04.png?w=400;800&format=webp&as=srcset";
-import aesthetics05 from "@/assets/aesthetics/aesthetics_05.png";
+import aesthetics05 from "@/assets/aesthetics/aesthetics_05.png?w=800&format=webp";
 import aesthetics05SrcSet from "@/assets/aesthetics/aesthetics_05.png?w=400;800&format=webp&as=srcset";
-import aesthetics06 from "@/assets/aesthetics/aesthetics_06.png";
+import aesthetics06 from "@/assets/aesthetics/aesthetics_06.png?w=800&format=webp";
 import aesthetics06SrcSet from "@/assets/aesthetics/aesthetics_06.png?w=400;800&format=webp&as=srcset";
-import aesthetics07 from "@/assets/aesthetics/aesthetics_07.png";
+import aesthetics07 from "@/assets/aesthetics/aesthetics_07.png?w=800&format=webp";
 import aesthetics07SrcSet from "@/assets/aesthetics/aesthetics_07.png?w=400;800&format=webp&as=srcset";
-import aesthetics08 from "@/assets/aesthetics/aesthetics_08.png";
+import aesthetics08 from "@/assets/aesthetics/aesthetics_08.png?w=800&format=webp";
 import aesthetics08SrcSet from "@/assets/aesthetics/aesthetics_08.png?w=400;800&format=webp&as=srcset";
 
 const Life = () => {

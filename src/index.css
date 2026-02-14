@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap');
+/* Google Fonts (Noto Sans TC / Noto Serif TC) loaded via <link> in index.html */
 
 /* 源泉圓體 - GenSenRounded (圓體中文字型) */
 @font-face {
@@ -6,7 +6,7 @@
   src: url('/fonts/GenSenRounded2TW-R.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 /* 芫荽 - Iansui (手寫風格中文字型) */

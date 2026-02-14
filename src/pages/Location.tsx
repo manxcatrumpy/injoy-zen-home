@@ -2,8 +2,8 @@ import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-// Import images with srcset for responsive loading
-import signboard from "@/assets/signboard.png";
+// Import images with WebP fallback (src) and responsive srcSet
+import signboard from "@/assets/signboard.png?w=1200&format=webp";
 import signboardSrcSet from "@/assets/signboard.png?w=600;1200;1800&format=webp&as=srcset";
 
 const Location = () => {

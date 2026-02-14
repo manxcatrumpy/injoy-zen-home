@@ -3,14 +3,14 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { OrganicImage } from "@/components/OrganicImage";
 
-// Import images with srcset for responsive loading
-import leavesCloseup from "@/assets/leaves-closeup.png";
+// Import images with WebP fallback (src) and responsive srcSet
+import leavesCloseup from "@/assets/leaves-closeup.png?w=800&format=webp";
 import leavesCloseupSrcSet from "@/assets/leaves-closeup.png?w=400;800;1200;1600&format=webp&as=srcset";
-import aboutPeople from "@/assets/about_people.png";
+import aboutPeople from "@/assets/about_people.png?w=800&format=webp";
 import aboutPeopleSrcSet from "@/assets/about_people.png?w=400;800;1200;1600&format=webp&as=srcset";
-import aboutThing from "@/assets/about_thing.png";
+import aboutThing from "@/assets/about_thing.png?w=800&format=webp";
 import aboutThingSrcSet from "@/assets/about_thing.png?w=400;800;1200&format=webp&as=srcset";
-import aboutObject from "@/assets/about_object.png";
+import aboutObject from "@/assets/about_object.png?w=800&format=webp";
 import aboutObjectSrcSet from "@/assets/about_object.png?w=400;800;1200&format=webp&as=srcset";
 
 const About = () => {

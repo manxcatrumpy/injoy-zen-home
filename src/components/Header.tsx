@@ -6,7 +6,7 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
-import logoWithChar from "@/assets/injoy_logo_with_char.png";
+import logoWithChar from "@/assets/injoy_logo_with_char.png?w=400&format=webp";
 
 const navItems = [
   { label: "首頁", href: "/", isRoute: true },
