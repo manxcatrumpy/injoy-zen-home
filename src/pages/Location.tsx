@@ -46,7 +46,7 @@ const Location = () => {
             {/* Google Map Embed */}
             <div className="w-full max-w-md mx-auto aspect-square rounded-lg overflow-hidden shadow-lg mb-12">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.5!2d121.4647!3d25.0247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9a0a0a0a0a0%3A0x0!2zMjXCsDAxJzI5LjAiTiAxMjHCsDI3JzUzLjAiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.5!2d121.47822!3d25.028745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94d17bc0517%3A0x88c1a24b258f67f7!2z5oKF57SN6JSt6aOf55Sf5rS76aSo!5e0!3m2!1szh-TW!2stw!4v1706400000000!5m2!1szh-TW!2stw"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
