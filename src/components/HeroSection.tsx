@@ -17,14 +17,13 @@ export const HeroSection = () => {
           loading="eager"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70" />
       </div>
 
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <h1
           className="font-iansui text-primary text-2xl md:text-3xl lg:text-4xl leading-relaxed max-w-2xl mx-auto"
-          style={{ textShadow: '0 1px 8px hsl(50 20% 96% / 0.6)' }}
+          style={{ textShadow: '0 0 20px hsl(50 20% 96%), 0 0 40px hsl(50 20% 96%), 0 0 60px hsl(50 20% 96% / 0.8)' }}
         >
           <span className="block mb-2">滋養會生活的生命</span>
           <span className="block mb-2">實踐有生命的生活</span>
@@ -38,6 +37,7 @@ export const HeroSection = () => {
       <a
         href="#about"
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary/80 hover:text-primary transition-colors group"
+        style={{ textShadow: '0 0 15px hsl(50 20% 96%), 0 0 30px hsl(50 20% 96% / 0.6)' }}
       >
         <span className="text-xs font-sans tracking-widest">探索</span>
         <ChevronDown 
