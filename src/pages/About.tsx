@@ -207,7 +207,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto px-6 relative">
             <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
               {/* Left: Text with Background Character */}
-              <div className="w-full md:w-3/5 text-left relative">
+              <div className="w-full md:w-3/5 text-left md:text-right relative z-10">
                 {/* Background Character - Behind text on left */}
                 <div className="absolute -top-16 -left-8 md:-left-16 pointer-events-none select-none">
                   <span className="text-[14rem] md:text-[18rem] font-serif text-primary/10 leading-none">
@@ -248,7 +248,7 @@ const About = () => {
                   src={heartTeam}
                   srcSet={heartTeamSrcSet}
                   alt="悦納團隊合照"
-                  variant="oval"
+                  variant="blob"
                   className="w-full max-w-sm mx-auto"
                 />
               </div>
