@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/useSEO";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -14,6 +15,11 @@ import aboutObject from "@/assets/about_object.png?w=800&format=webp";
 import aboutObjectSrcSet from "@/assets/about_object.png?w=400;800;1200&format=webp&as=srcset";
 
 const About = () => {
+  useSEO({
+    title: "關於悦納｜人 · 事 · 物 · 心｜injoy 悦納",
+    description: "認識悦納的品牌故事。以純淨、溫暖、手作為核心，從人、事、物、心四個面向，打造有生命的生活體驗。",
+  });
+
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden">
       {/* Skip Link for Accessibility */}
