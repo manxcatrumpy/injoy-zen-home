@@ -12,8 +12,8 @@ import aboutThing from "@/assets/about_thing.png?w=800&format=webp";
 import aboutThingSrcSet from "@/assets/about_thing.png?w=400;800;1200&format=webp&as=srcset";
 import aboutObject from "@/assets/about_object.png?w=800&format=webp";
 import aboutObjectSrcSet from "@/assets/about_object.png?w=400;800;1200&format=webp&as=srcset";
-import heartTeam from "@/assets/heart_team.jpg?w=800&format=webp";
-import heartTeamSrcSet from "@/assets/heart_team.jpg?w=400;800;1200&format=webp&as=srcset";
+import aboutHeart from "@/assets/about_heart.png?w=800&format=webp";
+import aboutHeartSrcSet from "@/assets/about_heart.png?w=400;800;1200&format=webp&as=srcset";
 
 const About = () => {
   return (
@@ -245,8 +245,8 @@ const About = () => {
               {/* Right: Image */}
               <div className="w-full md:w-2/5 flex justify-center relative z-10">
                 <OrganicImage
-                  src={heartTeam}
-                  srcSet={heartTeamSrcSet}
+                  src={aboutHeart}
+                  srcSet={aboutHeartSrcSet}
                   alt="悦納團隊合照"
                   variant="blob"
                   className="w-full max-w-sm mx-auto"
