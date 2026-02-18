@@ -46,7 +46,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <p className="text-center text-muted-foreground font-sans text-xs mt-8">
-          © {new Date().getFullYear()} Injoy 悦納. All rights reserved.
+          © {new Date().getFullYear()} injoy 悦納. All rights reserved.
         </p>
       </div>
     </footer>
