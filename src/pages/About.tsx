@@ -12,6 +12,8 @@ import aboutThing from "@/assets/about_thing.png?w=800&format=webp";
 import aboutThingSrcSet from "@/assets/about_thing.png?w=400;800;1200&format=webp&as=srcset";
 import aboutObject from "@/assets/about_object.png?w=800&format=webp";
 import aboutObjectSrcSet from "@/assets/about_object.png?w=400;800;1200&format=webp&as=srcset";
+import heartTeam from "@/assets/heart_team.jpg?w=800&format=webp";
+import heartTeamSrcSet from "@/assets/heart_team.jpg?w=400;800;1200&format=webp&as=srcset";
 
 const About = () => {
   return (
@@ -195,6 +197,60 @@ const About = () => {
                     簡單，但很豐盛；心安，就是幸福的歸處。
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4: 心 (Heart/Team) - Text on left with character behind, image on right */}
+        <section id="heart" className="py-24 md:py-32 relative overflow-hidden">
+          <div className="max-w-6xl mx-auto px-6 relative">
+            <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+              {/* Left: Text with Background Character */}
+              <div className="w-full md:w-3/5 text-left relative">
+                {/* Background Character - Behind text on left */}
+                <div className="absolute -top-16 -left-8 md:-left-16 pointer-events-none select-none">
+                  <span className="text-[14rem] md:text-[18rem] font-serif text-primary/10 leading-none">
+                    心
+                  </span>
+                </div>
+
+                <div className="relative z-10">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-relaxed">
+                    團隊，傳遞真摯溫度。
+                    <br />
+                    以誠相待，共建有生命的生活。
+                  </h2>
+
+                  <p className="text-foreground/70 mb-6 leading-loose">
+                    如果說空間是家，料理是愛，那麼悦納團隊就是溫暖迎接大家的心。
+                  </p>
+
+                  <div className="text-foreground/80 leading-loose space-y-2">
+                    <p>我們是群共同實踐「有生命的生活」的夥伴，</p>
+                    <p>因為深刻體會著純淨飲食帶來的美好，</p>
+                    <p>所以我們用心將這份幸福，傳遞給每一位來到悦納的你。</p>
+                  </div>
+
+                  <div className="text-foreground/60 mt-6 leading-loose space-y-2">
+                    <p>在這裡，只有如家人般的真心款待。</p>
+                    <p>每一次的「歡迎回家」，都蘊含著我們對人與自然最深的敬意。</p>
+                    <p>我們期待透過真摯的交流、樸實且用心的服務，</p>
+                    <p>成為連結【人】、【事】、【物】的橋樑。</p>
+                    <p>讓你在悦納的每一刻，都能真切感受到純淨的美好。</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: Image */}
+              <div className="w-full md:w-2/5 flex justify-center relative z-10">
+                <OrganicImage
+                  src={heartTeam}
+                  srcSet={heartTeamSrcSet}
+                  alt="悦納團隊合照"
+                  variant="oval"
+                  className="w-full max-w-sm mx-auto"
+                />
               </div>
             </div>
           </div>
