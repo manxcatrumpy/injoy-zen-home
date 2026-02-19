@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/useSEO";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -23,6 +24,11 @@ import aesthetics08 from "@/assets/aesthetics/aesthetics_08.png?w=800&format=web
 import aesthetics08SrcSet from "@/assets/aesthetics/aesthetics_08.png?w=400;800&format=webp&as=srcset";
 
 const Life = () => {
+  useSEO({
+    title: "生活美學｜茶道 · 花藝 · 人文體驗｜injoy 悦納",
+    description: "在悦納體驗生活美學。茶道、花藝、手作課程，讓日常慢下來，感受有生命的生活。",
+  });
+
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden font-sans">
       {/* Skip Link for Accessibility */}

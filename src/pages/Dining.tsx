@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Phone } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -30,6 +31,10 @@ import diningFire from "@/assets/dining-fire.png?w=1200&format=webp";
 import diningFireSrcSet from "@/assets/dining-fire.png?w=600;1200;1800&format=webp&as=srcset";
 
 const Dining = () => {
+  useSEO({
+    title: "餐飲體驗｜精緻套餐 · 火鍋 · 砂鍋飯｜injoy 悦納",
+    description: "品悦納福精緻套餐、真味日常火鍋、蘊火炊香砂鍋飯。慢火細熬的純淨蔬食料理，用時間與手作溫度款待每一位客人。",
+  });
   const [menuOpen, setMenuOpen] = useState(false);
   const [fineDiningOpen, setFineDiningOpen] = useState(false);
 

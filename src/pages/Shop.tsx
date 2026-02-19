@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/useSEO";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -60,6 +61,11 @@ const products = [
 ];
 
 const Shop = () => {
+  useSEO({
+    title: "悦納選物｜純淨好物 · 養生伴手禮｜injoy 悦納",
+    description: "精選純淨好物：玫瑰花釀、酵素、苦茶油、XO醬。悦納嚴選的養生伴手禮，把純淨的心意帶回家。",
+  });
+
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden font-sans">
       {/* Skip Link for Accessibility */}
