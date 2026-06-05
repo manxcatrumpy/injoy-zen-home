@@ -10,7 +10,7 @@ import signboardSrcSet from "@/assets/signboard.png?w=600;1200;1800&format=webp&
 const Location = () => {
   useSEO({
     title: "交通資訊｜新北板橋文聖街｜injoy 悦納",
-    description: "injoy 悦納位於新北市板橋區文聖街131號，近捷運江子翠站步行約10分鐘。午餐 11:30-14:00、午茶 14:30-16:30、晚餐 17:30-20:00，每週三公休。",
+    description: "injoy 悦納位於新北市板橋區文聖街131號，近捷運江子翠站步行約10分鐘。午餐 11:30-14:00、午茶 14:30-16:30、晚餐 17:30-20:00，每週三、週四公休。",
   });
 
   return (
@@ -90,7 +90,7 @@ const Location = () => {
                   <p>午餐 11:30-14:00</p>
                   <p>午茶 14:30-16:30</p>
                   <p>晚餐 17:30-20:00</p>
-                  <p className="mt-2">（週三公休）</p>
+                  <p className="mt-2">（週三、週四公休）</p>
                 </div>
               </div>
 
