@@ -1,5 +1,11 @@
-import { ChevronDown, MapPin, Phone } from "lucide-react";
+import { ChevronDown, Clock, MapPin, Phone } from "lucide-react";
 import signboard from "@/assets/signboard.png?w=800&format=webp";
+import {
+  BUSINESS_HOURS,
+  CLOSED_DAYS,
+  PHONE_DISPLAY,
+  PHONE_TEL_HREF,
+} from "@/lib/businessInfo";
 
 export const LocationSection = () => {
   return (
@@ -9,21 +15,33 @@ export const LocationSection = () => {
         <div className="text-center mb-16">
           <h2 className="font-serif text-primary text-xl mb-8">地理位置</h2>
 
-          <div className="space-y-3 text-foreground/80 font-sans text-sm">
+          <div className="space-y-3 text-foreground/80 font-sans text-base">
             <p className="flex items-center justify-center gap-2">
-              <MapPin size={16} className="text-primary" />
+              <MapPin size={16} className="text-primary shrink-0" />
               新北市板橋區文聖街131號
             </p>
-            <p className="text-muted-foreground text-xs">
+            <p className="text-muted-foreground text-sm">
               近捷運江子翠站（步行 10-12 分鐘）
             </p>
             <a
-              href="tel:+886-2-2250-0166"
-              className="flex items-center justify-center gap-2 text-primary hover:text-zen-green transition-colors"
+              href={PHONE_TEL_HREF}
+              className="inline-flex items-center justify-center gap-2 py-1 text-primary hover:text-zen-green transition-colors"
             >
-              <Phone size={16} strokeWidth={1.5} />
-              02-2250-0166
+              <Phone size={16} strokeWidth={1.5} className="shrink-0" />
+              {PHONE_DISPLAY}
             </a>
+            <div className="space-y-1 pt-2">
+              <p className="flex items-center justify-center gap-2 text-foreground/80">
+                <Clock size={16} strokeWidth={1.5} className="text-primary shrink-0" />
+                營業時間
+              </p>
+              {BUSINESS_HOURS.map(({ label, time }) => (
+                <p key={label} className="text-muted-foreground">
+                  {label} {time}
+                </p>
+              ))}
+              <p className="text-muted-foreground text-sm">（{CLOSED_DAYS}公休）</p>
+            </div>
           </div>
         </div>
 

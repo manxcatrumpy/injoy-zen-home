@@ -7,6 +7,7 @@ import {
   PopoverContent,
 } from "@/components/ui/popover";
 import logoWithChar from "@/assets/injoy_logo_with_char.png?w=400&format=webp";
+import { PHONE_DISPLAY, PHONE_TEL_HREF } from "@/lib/businessInfo";
 
 const navItems = [
   { label: "首頁", href: "/", isRoute: true },
@@ -179,11 +180,11 @@ export const Header = () => {
                   電話預約
                 </span>
                 <a
-                  href="tel:+886-2-2250-0166"
+                  href={PHONE_TEL_HREF}
                   className="flex items-center gap-2 text-primary font-serif text-lg tracking-wider hover:text-zen-green transition-colors"
                 >
                   <Phone size={16} strokeWidth={1.5} />
-                  02-2250-0166
+                  {PHONE_DISPLAY}
                 </a>
               </div>
             </PopoverContent>
@@ -241,12 +242,12 @@ export const Header = () => {
             )
           )}
           <a
-            href="tel:+886-2-2250-0166"
+            href={PHONE_TEL_HREF}
             onClick={() => setIsMobileMenuOpen(false)}
             className="text-foreground/80 hover:text-primary font-noto text-base py-2 transition-colors flex items-center justify-center gap-2"
           >
             <Phone size={14} strokeWidth={1.5} />
-            預約：02-2250-0166
+            預約：{PHONE_DISPLAY}
           </a>
         </nav>
       </div>

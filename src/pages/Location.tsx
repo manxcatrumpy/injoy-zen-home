@@ -3,6 +3,13 @@ import { useSEO } from "@/hooks/useSEO";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import {
+  BUSINESS_HOURS,
+  BUSINESS_HOURS_TEXT,
+  CLOSED_DAYS,
+  PHONE_DISPLAY,
+  PHONE_TEL_HREF,
+} from "@/lib/businessInfo";
 
 // Import images with WebP fallback (src) and responsive srcSet
 import signboard from "@/assets/signboard.png?w=1200&format=webp";
@@ -11,7 +18,7 @@ import signboardSrcSet from "@/assets/signboard.png?w=600;1200;1800&format=webp&
 const Location = () => {
   useSEO({
     title: "交通資訊｜新北板橋文聖街｜injoy 悦納",
-    description: "injoy 悦納位於新北市板橋區文聖街131號，近捷運江子翠站步行約10分鐘。午餐 11:30-14:00、午茶 14:30-16:30、晚餐 17:30-20:00，每週三、週四公休。",
+    description: `injoy 悦納位於新北市板橋區文聖街131號，近捷運江子翠站步行約10分鐘。${BUSINESS_HOURS_TEXT}，每${CLOSED_DAYS}公休。`,
   });
 
   return (
@@ -79,11 +86,11 @@ const Location = () => {
 
               {/* Phone */}
               <a
-                href="tel:+886-2-2250-0166"
+                href={PHONE_TEL_HREF}
                 className="flex items-center justify-center gap-2 text-primary hover:text-zen-green transition-colors"
               >
                 <Phone size={16} strokeWidth={1.5} />
-                02-2250-0166
+                {PHONE_DISPLAY}
               </a>
 
               {/* Business Hours */}
@@ -92,10 +99,12 @@ const Location = () => {
                   營業時間
                 </p>
                 <div className="text-muted-foreground text-base space-y-1">
-                  <p>午餐 11:30-14:00</p>
-                  <p>午茶 14:30-16:30</p>
-                  <p>晚餐 17:30-20:00</p>
-                  <p className="mt-2">（週三、週四公休）</p>
+                  {BUSINESS_HOURS.map(({ label, time }) => (
+                    <p key={label}>
+                      {label} {time}
+                    </p>
+                  ))}
+                  <p className="mt-2">（{CLOSED_DAYS}公休）</p>
                 </div>
               </div>
 
