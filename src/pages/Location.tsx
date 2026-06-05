@@ -78,7 +78,13 @@ const Location = () => {
 
               {/* Phone */}
               <p className="text-muted-foreground italic tracking-wider">
-                tel. +886-2-2250-0166
+                tel.{" "}
+                <a
+                  href="tel:+886222500166"
+                  className="hover:text-foreground transition-colors"
+                >
+                  +886-2-2250-0166
+                </a>
               </p>
 
               {/* Business Hours */}
