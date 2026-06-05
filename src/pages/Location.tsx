@@ -1,3 +1,4 @@
+import { Phone } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
@@ -77,9 +78,13 @@ const Location = () => {
               </div>
 
               {/* Phone */}
-              <p className="text-muted-foreground italic tracking-wider">
-                tel. +886-2-2250-0166
-              </p>
+              <a
+                href="tel:+886-2-2250-0166"
+                className="flex items-center justify-center gap-2 text-primary hover:text-zen-green transition-colors"
+              >
+                <Phone size={16} strokeWidth={1.5} />
+                02-2250-0166
+              </a>
 
               {/* Business Hours */}
               <div className="pt-4">
