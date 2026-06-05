@@ -5,6 +5,7 @@ import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MenuLightbox } from "@/components/MenuLightbox";
+import { PHONE_DISPLAY, PHONE_TEL_HREF } from "@/lib/businessInfo";
 import {
   Popover,
   PopoverTrigger,
@@ -262,12 +263,12 @@ const Dining = () => {
                   電話預約
                 </span>
                 <a
-                  href="tel:+886-2-2250-0166"
+                  href={PHONE_TEL_HREF}
                   className="flex items-center gap-2 text-primary font-serif text-lg tracking-wider
                              hover:text-zen-green transition-colors"
                 >
                   <Phone size={16} strokeWidth={1.5} />
-                  02-2250-0166
+                  {PHONE_DISPLAY}
                 </a>
               </div>
             </PopoverContent>

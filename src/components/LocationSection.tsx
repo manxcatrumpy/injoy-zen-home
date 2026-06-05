@@ -1,5 +1,11 @@
 import { ChevronDown, MapPin, Phone } from "lucide-react";
 import signboard from "@/assets/signboard.png?w=800&format=webp";
+import {
+  BUSINESS_HOURS,
+  CLOSED_DAYS,
+  PHONE_DISPLAY,
+  PHONE_TEL_HREF,
+} from "@/lib/businessInfo";
 
 export const LocationSection = () => {
   return (
@@ -18,12 +24,20 @@ export const LocationSection = () => {
               近捷運江子翠站（步行 10-12 分鐘）
             </p>
             <a
-              href="tel:+886-2-2250-0166"
+              href={PHONE_TEL_HREF}
               className="flex items-center justify-center gap-2 text-primary hover:text-zen-green transition-colors"
             >
               <Phone size={16} strokeWidth={1.5} />
-              02-2250-0166
+              {PHONE_DISPLAY}
             </a>
+            <div className="text-muted-foreground text-xs space-y-1 pt-1">
+              {BUSINESS_HOURS.map(({ label, time }) => (
+                <p key={label}>
+                  {label} {time}
+                </p>
+              ))}
+              <p>（{CLOSED_DAYS}公休）</p>
+            </div>
           </div>
         </div>
 
