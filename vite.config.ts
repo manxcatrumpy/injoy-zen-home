@@ -7,11 +7,6 @@ import { imagetools } from "vite-imagetools";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: "/",
-  // vite-react-ssg: emit flat /foo.html files. GitHub Pages serves foo.html
-  // at /foo with a 200 (no redirect), matching our slash-less canonical URLs.
-  ssgOptions: {
-    dirStyle: "flat",
-  },
   server: {
     host: "::",
     port: 8080,
