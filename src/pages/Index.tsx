@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useSEO } from "@/hooks/useSEO";
+import { Seo } from "@/components/Seo";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { FlowingWave } from "@/components/FlowingWave";
@@ -25,10 +25,6 @@ import gatheringFriends from "@/assets/gathering-friends.png?w=800&format=webp";
 import gatheringFriendsSrcSet from "@/assets/gathering-friends.png?w=400;800;1200&format=webp&as=srcset";
 
 const Index = () => {
-  useSEO({
-    title: "injoy 悦納｜純淨飲食 · 人文空間 · 新北板橋蔬食餐廳",
-    description: "悦納，隨時歡迎你回家。以慢生活理念打造的純淨蔬食餐廳與人文空間，提供精緻套餐、火鍋、砂鍋飯，位於新北市板橋區文聖街。",
-  });
   const location = useLocation();
 
   // Handle hash navigation when coming from other pages
@@ -47,6 +43,11 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden">
+      <Seo
+        title="injoy 悦納｜純淨飲食 · 人文空間 · 新北板橋蔬食餐廳"
+        description="悦納，隨時歡迎你回家。以慢生活理念打造的純淨蔬食餐廳與人文空間，提供精緻套餐、火鍋、砂鍋飯，位於新北市板橋區文聖街。"
+        path="/"
+      />
       {/* Skip Link for Accessibility */}
       <SkipLink />
 
