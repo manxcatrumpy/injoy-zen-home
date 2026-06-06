@@ -6,7 +6,7 @@ import { imagetools } from "vite-imagetools";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/injoy-zen-home/" : "/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
