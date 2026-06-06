@@ -1,4 +1,4 @@
-import { useSEO } from "@/hooks/useSEO";
+import { Seo } from "@/components/Seo";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -22,13 +22,13 @@ import humanities06 from "@/assets/Humanities/Humanities_06.png?w=800&format=web
 import humanities06SrcSet from "@/assets/Humanities/Humanities_06.png?w=600;1185&format=webp&as=srcset";
 
 const Space = () => {
-  useSEO({
-    title: "空間介紹｜如家般的人文空間｜injoy 悦納",
-    description: "溫暖的色調、剛剛好的光線，悦納的空間如家一般溫馨。適合聚餐、茶道體驗、小型活動的人文生活空間。",
-  });
-
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden font-sans">
+      <Seo
+        title="空間介紹｜如家般的人文空間｜injoy 悦納"
+        description="溫暖的色調、剛剛好的光線，悦納的空間如家一般溫馨。適合聚餐、茶道體驗、小型活動的人文生活空間。"
+        path="/space"
+      />
       {/* Skip Link for Accessibility */}
       <SkipLink />
 

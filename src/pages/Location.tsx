@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import { useSEO } from "@/hooks/useSEO";
+import { Seo } from "@/components/Seo";
 import { SkipLink } from "@/components/SkipLink";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -16,13 +16,13 @@ import signboard from "@/assets/signboard.png?w=1200&format=webp";
 import signboardSrcSet from "@/assets/signboard.png?w=600;1200;1800&format=webp&as=srcset";
 
 const Location = () => {
-  useSEO({
-    title: "交通資訊｜新北板橋文聖街｜injoy 悦納",
-    description: `injoy 悦納位於新北市板橋區文聖街131號，近捷運江子翠站步行約10分鐘。${BUSINESS_HOURS_TEXT}，每${CLOSED_DAYS}公休。`,
-  });
-
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden font-sans">
+      <Seo
+        title="交通資訊｜新北板橋文聖街｜injoy 悦納"
+        description={`injoy 悦納位於新北市板橋區文聖街131號，近捷運江子翠站步行約10分鐘。${BUSINESS_HOURS_TEXT}，每${CLOSED_DAYS}公休。`}
+        path="/location"
+      />
       {/* Skip Link for Accessibility */}
       <SkipLink />
 
