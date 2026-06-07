@@ -79,7 +79,7 @@ export const ContentSection = ({
                 </span>
                 <h2 className="text-[2rem] font-bold text-foreground mt-1">{title}</h2>
               </div>
-              <div className="text-lg leading-loose text-foreground/80 mb-8 font-light tracking-wide">
+              <div className="text-lg leading-loose text-foreground/80 mb-6">
                 {description}
               </div>
               <MoreLink moreLink={moreLink} id={id} title={title} />
