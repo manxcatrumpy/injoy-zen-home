@@ -94,7 +94,7 @@ export const ContentSection = ({
   if (layoutVariant === "image-right") {
     return (
       <section id={id} className="py-24 md:py-32">
-        <div className="max-w-5xl mx-auto px-6 relative">
+        <div className="max-w-6xl mx-auto px-6 relative">
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-24">
             {/* Left: Text (right-aligned on desktop) */}
             <div className="w-full md:w-1/2 text-left md:text-right md:pr-10">
@@ -154,7 +154,7 @@ export const ContentSection = ({
   if (layoutVariant === "image-left") {
     return (
       <section id={id} className="py-24 md:py-32">
-        <div className="max-w-5xl mx-auto px-6 relative">
+        <div className="max-w-6xl mx-auto px-6 relative">
           <div className="flex flex-col-reverse md:flex-row-reverse items-center justify-between gap-12 md:gap-24">
             {/* Right: Text */}
             <div className="w-full md:w-1/2 text-left md:text-right md:pr-10">
@@ -184,7 +184,7 @@ export const ContentSection = ({
   if (layoutVariant === "overlay") {
     return (
       <section id={id} className="py-24 md:py-32 mb-12">
-        <div className="max-w-5xl mx-auto px-6 relative">
+        <div className="max-w-6xl mx-auto px-6 relative">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24">
             {/* Left: Image */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
