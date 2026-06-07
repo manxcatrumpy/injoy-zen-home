@@ -9,10 +9,12 @@
   font-display: optional;
 }
 
-/* 芫荽 - Iansui (手寫風格中文字型) */
+/* 芫荽 - Iansui (手寫風格中文字型)
+   Subset to the glyphs used on the site (see scripts/subset-fonts.sh):
+   9.0MB ttf -> ~231KB woff2. Missing glyphs fall back to Noto Sans TC. */
 @font-face {
   font-family: 'Iansui';
-  src: url('/fonts/Iansui-Regular.ttf') format('truetype');
+  src: url('/fonts/Iansui-subset.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
