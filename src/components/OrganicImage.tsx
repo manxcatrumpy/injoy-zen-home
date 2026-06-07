@@ -75,7 +75,7 @@ export const OrganicImage = ({
 
       {/* Main image container with fixed aspect ratio */}
       <div
-        className="overflow-hidden shadow-organic"
+        className="overflow-hidden shadow-organic bg-muted"
         style={{
           borderRadius: config.borderRadius,
           aspectRatio: config.aspectRatio,
