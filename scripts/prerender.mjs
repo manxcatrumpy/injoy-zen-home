@@ -61,6 +61,25 @@ function startServer() {
   return new Promise((resolve) => server.listen(PORT, () => resolve(server)));
 }
 
+// While prerendering, the browser fires the font link's onload and rewrites
+// media="print" -> "all", which would make the captured stylesheet render-
+// blocking again. Re-assert media="print" on the Google Fonts stylesheet link
+// (the preload and <noscript> copies are left alone) so first paint stays fast.
+function keepFontsNonBlocking(html) {
+  return html.replace(/<link\b[^>]*>/g, (tag) => {
+    if (
+      tag.includes("fonts.googleapis.com") &&
+      /rel=["']stylesheet["']/.test(tag) &&
+      tag.includes("onload")
+    ) {
+      return /\smedia=["'][^"']*["']/.test(tag)
+        ? tag.replace(/\smedia=["'][^"']*["']/, ' media="print"')
+        : tag.replace("<link ", '<link media="print" ');
+    }
+    return tag;
+  });
+}
+
 async function main() {
   const server = await startServer();
   const browser = await chromium.launch();
@@ -74,7 +93,8 @@ async function main() {
       return root && root.children.length > 0;
     });
 
-    const html = "<!DOCTYPE html>\n" + (await page.content()).replace(/^<!DOCTYPE html>/i, "");
+    let html = "<!DOCTYPE html>\n" + (await page.content()).replace(/^<!DOCTYPE html>/i, "");
+    html = keepFontsNonBlocking(html);
     const outName = route === "/" ? "index.html" : `${route.slice(1)}.html`;
     await writeFile(join(DIST, outName), html, "utf-8");
     const title = await page.title();
