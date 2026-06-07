@@ -142,7 +142,7 @@ const Index = () => {
             <OrganicImage
               src={restaurantInterior}
               srcSet={restaurantInteriorSrcSet}
-              sizes="(max-width: 768px) 100vw, 60vw"
+              sizes="(max-width: 768px) 100vw, 384px"
               alt="溫馨的用餐空間"
               variant="capsule-left"
               className="w-full max-w-sm mx-auto"
